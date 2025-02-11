@@ -31,8 +31,9 @@ const ManufacturerOrders = () => {
 
   const updateOrderStatus = async (orderDetailId, newStatus) => {
     setUpdating(true);
+    console.log("updating order:",orderDetailId,"to status:", newStatus);
     try {
-      const response = await fetch("http://localhost:3000/api/manufacturers/update-status", {
+      const response = await fetch("http://localhost:3000/api/manufacturers/orders/update-status", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
