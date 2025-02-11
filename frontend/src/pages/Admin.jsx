@@ -21,7 +21,7 @@ const Admin = () => {
             if (!response.ok) throw new Error("Failed to fetch products");
 
             const data = await response.json();
-            console.log("Fetched Products:", data); // Debugging output
+            console.log("Fetched Products:", data); 
             setProducts(data);
         } catch (error) {
             console.error("Error fetching products:", error);

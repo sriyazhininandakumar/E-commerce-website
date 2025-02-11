@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 
 const CartCust = () => {
-  const { cart, setCart, userId } = useOutletContext(); // Ensure userId is available
+  const { cart, setCart, userId } = useOutletContext(); 
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
