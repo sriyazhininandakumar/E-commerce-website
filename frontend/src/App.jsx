@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Signup from "./pages/Signup";
 import Signin from "./pages/Signin";
-import Customer from "./pages/Customer";  // Customer dashboard
+import Customer from "./pages/Customer";  
 import Admin from "./pages/Admin";
 import Manufacturer from "./pages/Manufacturer";
 import ProtectedRoute from "./components/ProtectedRoute"; 
