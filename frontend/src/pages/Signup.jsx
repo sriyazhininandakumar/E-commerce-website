@@ -59,24 +59,21 @@ const Signup = () => {
             placeholder="Name"
             onChange={handleChange}
             required
-            className="w-full p-2 border rounded focus:ring-2 focus:ring-blue-400"
-          />
+            className="w-full p-2 border rounded focus:ring-2 focus:ring-blue-400"/>
           <input
             type="email"
             name="email"
             placeholder="Email"
             onChange={handleChange}
             required
-            className="w-full p-2 border rounded focus:ring-2 focus:ring-blue-400"
-          />
+            className="w-full p-2 border rounded focus:ring-2 focus:ring-blue-400"/>
           <input
             type="password"
             name="password"
             placeholder="Password"
             onChange={handleChange}
             required
-            className="w-full p-2 border rounded focus:ring-2 focus:ring-blue-400"
-          />
+            className="w-full p-2 border rounded focus:ring-2 focus:ring-blue-400"/>
           <select
             name="roleId"
             value={formData.roleId}

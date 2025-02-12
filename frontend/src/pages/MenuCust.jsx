@@ -4,7 +4,6 @@ import { useOutletContext } from "react-router-dom";
 const MenuCust = () => {
   const [products, setProducts] = useState([]);
   const { cart, setCart } = useOutletContext();
-  const [clickedProducts, setClickedProducts] = useState(new Set()); // Track clicked products
 
   useEffect(() => {
     fetch("http://localhost:3000/api/products")
@@ -15,7 +14,6 @@ const MenuCust = () => {
 
   const addToCart = (product) => {
     setCart((prevCart) => [...prevCart, product]);
-    setClickedProducts((prev) => new Set(prev).add(product.id)); // Mark as clicked
   };
 
   return (
@@ -32,13 +30,9 @@ const MenuCust = () => {
             <p className="text-gray-600">Price: ₹{product.price}</p>
             <button
               onClick={() => addToCart(product)}
-              className={`mt-3 px-4 py-2 rounded-md transition ${
-                clickedProducts.has(product.id)
-                  ? "bg-green-600 text-white" // Change color after click
-                  : "bg-black text-white hover:bg-gray-800"
-              }`}
+              className="mt-3 px-4 py-2 rounded-md bg-black text-white hover:bg-gray-800 transition"
             >
-              {clickedProducts.has(product.id) ? "Added" : "Add to Cart"}
+              Add to Cart
             </button>
           </div>
         ))}

@@ -54,7 +54,7 @@ const signInUser = async (req, res) => {
             return res.status(404).json('Email not found');
         }
 
-        // Convert password to string before comparing
+
         const passwordStr = String(password);
 
         const passwordValid = await bcrypt.compare(passwordStr, user.password);
