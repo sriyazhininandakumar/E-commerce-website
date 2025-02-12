@@ -31,7 +31,6 @@ const ManufacturerOrders = () => {
 
   const updateOrderStatus = async (orderDetailId, newStatus) => {
     setUpdating(true);
-    console.log("updating order:",orderDetailId,"to status:", newStatus);
     try {
       const response = await fetch("http://localhost:3000/api/manufacturers/orders/update-status", {
         method: "PUT",
@@ -54,43 +53,46 @@ const ManufacturerOrders = () => {
     }
   };
 
-  if (loading) return <p>Loading orders...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) return <p className="text-center text-lg">Loading orders...</p>;
+  if (error) return <p className="text-center text-red-500">Error: {error}</p>;
 
   return (
-    <div>
-      <h2>Manufacturer Orders</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Order ID</th>
-            <th>Product</th>
-            <th>Customer</th>
-            <th>Status</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {orders.map((order) => (
-            order.OrderDetails.map((detail) => (
-              <tr key={detail.id}>
-                <td>{order.id}</td>
-                <td>{detail.Product.name}</td>
-                <td>{order.User.name} ({order.User.email})</td>
-                <td>{detail.status}</td>
-                <td>
-                  <button
-                    onClick={() => updateOrderStatus(detail.id, "Shipped")}
-                    disabled={updating}
-                  >
-                    Mark as Shipped
-                  </button>
-                </td>
-              </tr>
-            ))
-          ))}
-        </tbody>
-      </table>
+    <div className="p-4 max-w-4xl mx-auto">
+      <h2 className="text-2xl font-bold text-center mb-4">Manufacturer Orders</h2>
+      <div className="overflow-x-auto">
+        <table className="min-w-full bg-white shadow-md rounded-lg">
+          <thead>
+            <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+              <th className="py-3 px-6 text-left">Order ID</th>
+              <th className="py-3 px-6 text-left">Product</th>
+              <th className="py-3 px-6 text-left">Customer</th>
+              <th className="py-3 px-6 text-left">Status</th>
+              <th className="py-3 px-6 text-center">Action</th>
+            </tr>
+          </thead>
+          <tbody className="text-gray-600 text-sm font-light">
+            {orders.map((order) => (
+              order.OrderDetails.map((detail) => (
+                <tr key={detail.id} className="border-b border-gray-200 hover:bg-gray-100">
+                  <td className="py-3 px-6 text-left whitespace-nowrap">{order.id}</td>
+                  <td className="py-3 px-6 text-left">{detail.Product.name}</td>
+                  <td className="py-3 px-6 text-left">{order.User.name} ({order.User.email})</td>
+                  <td className="py-3 px-6 text-left font-medium text-blue-600">{detail.status}</td>
+                  <td className="py-3 px-6 text-center">
+                    <button
+                      onClick={() => updateOrderStatus(detail.id, "Shipped")}
+                      disabled={updating}
+                      className="bg-blue-500 text-white py-1 px-3 rounded-lg hover:bg-blue-600 disabled:bg-gray-400"
+                    >
+                      {updating ? "Updating..." : "Mark as Shipped"}
+                    </button>
+                  </td>
+                </tr>
+              ))
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

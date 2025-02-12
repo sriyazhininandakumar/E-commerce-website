@@ -11,7 +11,6 @@ const Signup = () => {
   });
   const [message, setMessage] = useState("");
 
- 
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -19,7 +18,6 @@ const Signup = () => {
     });
   };
 
-  
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Sending to backend:", formData);
@@ -37,7 +35,7 @@ const Signup = () => {
         data = { message: "Unexpected error" };
       }
 
-      console.log("Response from backend:", data); 
+      console.log("Response from backend:", data);
 
       if (response.ok) {
         setMessage("Signup Successful! Redirecting...");
@@ -51,24 +49,64 @@ const Signup = () => {
   };
 
   return (
-    <div>
-      <h2>Sign Up</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="name" placeholder="Name" onChange={handleChange} required />
-        <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
-        <input type="password" name="password" placeholder="Password" onChange={handleChange} required />
-
-        <select name="roleId" value={formData.roleId} onChange={handleChange} required>
-          <option value="" disabled>Select Role</option>
-          <option value="2">Customer</option>
-          <option value="3">Manufacturer</option>
-          <option value="1">Admin</option>
-        </select>
-
-        <button type="submit">Sign Up</button>
-      </form>
-      <p>{message}</p>
-      <p>Already have an account? <a href="/signin">Sign in</a></p>
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+      <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
+        <h2 className="text-2xl font-bold text-center text-gray-700 mb-4">Sign Up</h2>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            onChange={handleChange}
+            required
+            className="w-full p-2 border rounded focus:ring-2 focus:ring-blue-400"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            onChange={handleChange}
+            required
+            className="w-full p-2 border rounded focus:ring-2 focus:ring-blue-400"
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            onChange={handleChange}
+            required
+            className="w-full p-2 border rounded focus:ring-2 focus:ring-blue-400"
+          />
+          <select
+            name="roleId"
+            value={formData.roleId}
+            onChange={handleChange}
+            required
+            className="w-full p-2 border rounded focus:ring-2 focus:ring-blue-400"
+          >
+            <option value="" disabled>Select Role</option>
+            <option value="2">Customer</option>
+            <option value="3">Manufacturer</option>
+            <option value="1">Admin</option>
+          </select>
+          <button
+            type="submit"
+            className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
+          >
+            Sign Up
+          </button>
+        </form>
+        {message && <p className="mt-2 text-center text-red-500">{message}</p>}
+        <p className="mt-4 text-center text-gray-600">
+          Already have an account?{" "}
+          <span
+            className="text-blue-500 cursor-pointer hover:underline"
+            onClick={() => navigate("/")}
+          >
+            Sign In
+          </span>
+        </p>
+      </div>
     </div>
   );
 };

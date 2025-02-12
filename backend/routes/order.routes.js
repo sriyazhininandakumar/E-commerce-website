@@ -2,28 +2,24 @@ const express = require('express');
 const { Order, OrderDetails, Product, User, sequelize } = require('../models'); 
 const router = express.Router();
 
-
 router.post('/place-order', async (req, res) => {
     const transaction = await sequelize.transaction(); 
     try {
-        const { userEmail, cartItems } = req.body; 
+        const { userId, cartItems } = req.body;  // Change from userEmail to userId
 
-        
-        const user = await User.findOne({ where: { email: userEmail } });
+        const user = await User.findByPk(userId);
         if (!user) return res.status(404).json({ message: "User not found" });
 
-       
         const newOrder = await Order.create(
             { userId: user.id, dateOfOrder: new Date() },
             { transaction }
         );
 
-
         for (const item of cartItems) {
-            const product = await Product.findOne({ where: { name: item.productName } });
+            const product = await Product.findByPk(item.productId); // Use productId instead of productName
 
             if (!product) {
-                throw new Error(`Product not found: ${item.productName}`);
+                throw new Error(`Product not found: ${item.productId}`);
             }
 
             await OrderDetails.create(
@@ -46,7 +42,5 @@ router.post('/place-order', async (req, res) => {
         res.status(500).json({ message: "Error placing order", error: error.message });
     }
 });
-
-
 
 module.exports = router;

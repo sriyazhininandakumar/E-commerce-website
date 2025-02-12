@@ -1,21 +1,29 @@
 import { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import NavCust from "../components/NavCust";
-
+import pic3 from "../assets/pic3.jpg";
 const CustomerDashboard = () => {
   const [cart, setCart] = useState([]);
-    return (
-      <div>
-        <h1>Welcome, Customer!</h1>
-        <p>This is your dashboard.</p>
+  const location = useLocation(); 
 
-        
-      <NavCust /> 
-      <h2>Customer Dashboard</h2>
+  return (
+    <div>
+      
+      <NavCust />
+
+
+      {location.pathname === "/customer" && (
+        <div className="home-content">
+          <div className="image-container">
+            <img src={pic3} alt="pic 1" className="home-image" />
+          </div>
+        </div>
+      )}
+
+      
       <Outlet context={{ cart, setCart }} />
-      </div>
-    );
-  };
-  
-  export default CustomerDashboard;
-  
+    </div>
+  );
+};
+
+export default CustomerDashboard;

@@ -21,7 +21,7 @@ const Admin = () => {
             if (!response.ok) throw new Error("Failed to fetch products");
 
             const data = await response.json();
-            console.log("Fetched Products:", data); 
+            console.log("Fetched Products:", data);
             setProducts(data);
         } catch (error) {
             console.error("Error fetching products:", error);
@@ -145,39 +145,58 @@ const Admin = () => {
     };
 
     return (
-        <div>
-            <h2>Admin Dashboard</h2>
+        <div className="max-w-lg mx-auto p-6 bg-gray-100 rounded-lg shadow-md">
+            <h2 className="text-2xl font-bold mb-4 text-center">Admin Dashboard</h2>
 
-            <h3>{editingProduct ? "Edit Product" : "Add Product"}</h3>
-            <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
-            <input type="text" placeholder="Description" value={description} onChange={(e) => setDescription(e.target.value)} />
-            <input type="number" placeholder="Price" value={price} onChange={(e) => setPrice(e.target.value)} />
+           
+            <div className="mb-6">
+                <h3 className="text-lg font-semibold mb-2">{editingProduct ? "Edit Product" : "Add Product"}</h3>
+                <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)}
+                    className="w-full p-2 mb-2 border rounded" />
+                <input type="text" placeholder="Description" value={description} onChange={(e) => setDescription(e.target.value)}
+                    className="w-full p-2 mb-2 border rounded" />
+                <input type="number" placeholder="Price" value={price} onChange={(e) => setPrice(e.target.value)}
+                    className="w-full p-2 mb-2 border rounded" />
+                {editingProduct ? (
+                    <button onClick={updateProduct} className="bg-blue-500 text-white px-4 py-2 rounded w-full hover:bg-blue-600">
+                        Update Product
+                    </button>
+                ) : (
+                    <button onClick={addProduct} className="bg-blue-500  text-white px-4 py-2 rounded w-full hover:bg-blue-600">
+                        Add Product
+                    </button>
+                )}
+            </div>
 
-            {editingProduct ? (
-                <button onClick={updateProduct}>Update Product</button>
-            ) : (
-                <button onClick={addProduct}>Add Product</button>
-            )}
-
-            <h3>Products List</h3>
+          
+            <h3 className="text-lg font-semibold mb-2">Products List</h3>
             {products.length === 0 ? (
-                <p>No products available.</p>
+                <p className="text-gray-500">No products available.</p>
             ) : (
-                <ul>
+                <ul className="space-y-2">
                     {products.map((product) => (
-                        <li key={product.id}>
-                            {product.name} - Rs {product.price}
-                            <button onClick={() => editProduct(product)}>Edit</button>
-                            <button onClick={() => deleteProduct(product.id)}>Delete</button>
+                        <li key={product.id} className="flex justify-between items-center p-3 border rounded bg-white shadow">
+                            <span>{product.name} - Rs {product.price}</span>
+                            <div>
+                                <button onClick={() => editProduct(product)}
+                                    className="bg-yellow-500 text-white px-3 py-1 rounded mr-2 hover:bg-yellow-600">Edit</button>
+                                <button onClick={() => deleteProduct(product.id)}
+                                    className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Delete</button>
+                            </div>
                         </li>
                     ))}
                 </ul>
             )}
 
-            <h3>Assign Manufacturer</h3>
-            <input type="number" placeholder="Manufacturer ID" value={manufacturerId} onChange={(e) => setManufacturerId(e.target.value)} />
-            <input type="number" placeholder="Product ID" value={productId} onChange={(e) => setProductId(e.target.value)} />
-            <button onClick={assignManufacturer}>Assign</button>
+           
+            <h3 className="text-lg font-semibold mt-4">Assign Manufacturer</h3>
+            <input type="number" placeholder="Manufacturer ID" value={manufacturerId} onChange={(e) => setManufacturerId(e.target.value)}
+                className="w-full p-2 mb-2 border rounded" />
+            <input type="number" placeholder="Product ID" value={productId} onChange={(e) => setProductId(e.target.value)}
+                className="w-full p-2 mb-2 border rounded" />
+            <button onClick={assignManufacturer} className="bg-purple-500 text-white px-4 py-2 rounded w-full hover:bg-purple-600">
+                Assign
+            </button>
         </div>
     );
 };
