@@ -1,8 +1,10 @@
 import { useState, useEffect, useRef } from "react";
+import axios from "axios";
 
 const Admin = () => {
     const [products, setProducts] = useState([]);
     const [editingProduct, setEditingProduct] = useState(null);
+    const [notification, setNotification] = useState(null); // New state for notification
 
     const nameRef = useRef();
     const descriptionRef = useRef();
@@ -18,129 +20,105 @@ const Admin = () => {
 
     const fetchProducts = async () => {
         try {
-            const response = await fetch("http://localhost:3000/api/products");
-            if (!response.ok) throw new Error("Failed to fetch products");
-
-            const data = await response.json();
-            setProducts(data);
+            const response = await axios.get("http://localhost:3000/api/products");
+            setProducts(response.data);
         } catch (error) {
-            alert(error.message);
+            showNotification(error.response?.data?.message || "Error fetching products", "error");
         }
     };
 
+    const showNotification = (message, type = "success") => {
+        setNotification({ message, type });
+        setTimeout(() => setNotification(null), 3000); // Auto-hide after 3 sec
+    };
+
     const addProduct = async () => {
-        if (!token) return alert("Authentication required.");
+        if (!token) return showNotification("Authentication required.", "error");
 
         const name = nameRef.current.value;
         const description = descriptionRef.current.value;
         const price = parseFloat(priceRef.current.value);
 
-        if (!name || !description || isNaN(price) || price <= 0) return alert("Invalid input!");
+        if (!name || !description || isNaN(price) || price <= 0) {
+            return showNotification("Invalid input!", "error");
+        }
 
         try {
-            const response = await fetch("http://localhost:3000/api/products", {
-                method: "POST",
-                headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
-                body: JSON.stringify({ name, description, price }),
-            });
+            const response = await axios.post(
+                "http://localhost:3000/api/products",
+                { name, description, price },
+                { headers: { Authorization: `Bearer ${token}` } }
+            );
 
-            const data = await response.json();
-            if (!response.ok) throw new Error(data.message);
-
-            alert(data.message);
+            showNotification(response.data.message, "success");
             nameRef.current.value = "";
             descriptionRef.current.value = "";
             priceRef.current.value = "";
             fetchProducts();
         } catch (error) {
-            alert(error.message);
+            showNotification(error.response?.data?.message || "Error adding product", "error");
         }
     };
 
     const deleteProduct = async (id) => {
-        if (!token) return alert("Authentication required.");
+        if (!token) return showNotification("Authentication required.", "error");
 
         try {
-            const response = await fetch(`http://localhost:3000/api/products/${id}`, {
-                method: "DELETE",
+            await axios.delete(`http://localhost:3000/api/products/${id}`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
 
-            if (!response.ok) throw new Error("Failed to delete product");
-
+            showNotification("Product deleted successfully.", "success");
             fetchProducts();
         } catch (error) {
-            alert(error.message);
+            showNotification(error.response?.data?.message || "Error deleting product", "error");
         }
-    };
-
-    const editProduct = (product) => {
-        setEditingProduct(product);
-        nameRef.current.value = product.name;
-        descriptionRef.current.value = product.description;
-        priceRef.current.value = product.price;
     };
 
     const updateProduct = async () => {
         if (!editingProduct) return;
-        if (!token) return alert("Authentication required.");
+        if (!token) return showNotification("Authentication required.", "error");
 
         const name = nameRef.current.value;
         const description = descriptionRef.current.value;
         const price = parseFloat(priceRef.current.value);
 
-        if (!name || !description || isNaN(price) || price <= 0) return alert("Invalid input!");
+        if (!name || !description || isNaN(price) || price <= 0) {
+            return showNotification("Invalid input!", "error");
+        }
 
         try {
-            const response = await fetch(`http://localhost:3000/api/products/${editingProduct.id}`, {
-                method: "PUT",
-                headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
-                body: JSON.stringify({ name, description, price }),
-            });
+            const response = await axios.put(
+                `http://localhost:3000/api/products/${editingProduct.id}`,
+                { name, description, price },
+                { headers: { Authorization: `Bearer ${token}` } }
+            );
 
-            const data = await response.json();
-            if (!response.ok) throw new Error(data.message);
-
-            alert("Product updated successfully!");
+            showNotification(response.data.message, "success");
             setEditingProduct(null);
             nameRef.current.value = "";
             descriptionRef.current.value = "";
             priceRef.current.value = "";
             fetchProducts();
         } catch (error) {
-            alert(error.message);
-        }
-    };
-
-    const assignManufacturer = async () => {
-        if (!token) return alert("Authentication required.");
-
-        const manufacturerId = manufacturerIdRef.current.value;
-        const productId = productIdRef.current.value;
-
-        if (!manufacturerId || !productId) return alert("Please fill all fields.");
-
-        try {
-            const response = await fetch("http://localhost:3000/api/manufacturerproduct", {
-                method: "POST",
-                headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
-                body: JSON.stringify({ manufacturerId, productId }),
-            });
-
-            const data = await response.json();
-            if (!response.ok) throw new Error(data.message);
-
-            alert(data.message);
-            manufacturerIdRef.current.value = "";
-            productIdRef.current.value = "";
-        } catch (error) {
-            alert(error.message);
+            showNotification(error.response?.data?.message || "Error updating product", "error");
         }
     };
 
     return (
         <div className="max-w-lg mx-auto p-6 bg-gray-100 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold mb-4 text-center">Admin Dashboard</h2>
+
+            {/* Notification */}
+            {notification && (
+                <div
+                    className={`p-3 mb-4 text-white text-center rounded-lg ${
+                        notification.type === "success" ? "bg-green-500" : "bg-red-500"
+                    }`}
+                >
+                    {notification.message}
+                </div>
+            )}
 
             <div className="mb-6">
                 <h3 className="text-lg font-semibold mb-2">{editingProduct ? "Edit Product" : "Add Product"}</h3>
@@ -168,20 +146,13 @@ const Admin = () => {
                         <li key={product.id} className="flex justify-between items-center p-3 border rounded bg-white shadow">
                             <span>{product.name} - Rs {product.price}</span>
                             <div>
-                                <button onClick={() => editProduct(product)} className="bg-yellow-500 text-white px-3 py-1 rounded mr-2 hover:bg-yellow-600">Edit</button>
+                                <button onClick={() => setEditingProduct(product)} className="bg-yellow-500 text-white px-3 py-1 rounded mr-2 hover:bg-yellow-600">Edit</button>
                                 <button onClick={() => deleteProduct(product.id)} className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Delete</button>
                             </div>
                         </li>
                     ))}
                 </ul>
             )}
-
-            <h3 className="text-lg font-semibold mt-4">Assign Manufacturer</h3>
-            <input ref={manufacturerIdRef} type="number" placeholder="Manufacturer ID" className="w-full p-2 mb-2 border rounded" />
-            <input ref={productIdRef} type="number" placeholder="Product ID" className="w-full p-2 mb-2 border rounded" />
-            <button onClick={assignManufacturer} className="bg-purple-500 text-white px-4 py-2 rounded w-full hover:bg-purple-600">
-                Assign
-            </button>
         </div>
     );
 };

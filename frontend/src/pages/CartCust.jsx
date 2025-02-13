@@ -1,20 +1,24 @@
 import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
+import axios from "axios";
 
 const CartCust = () => {
   const { cart, setCart } = useOutletContext();
-  
-  // Initialize quantity state for each product in cart
   const [quantities, setQuantities] = useState({});
+  const [notification, setNotification] = useState(null); // New notification state
 
   useEffect(() => {
-    // When cart updates, initialize quantity for each product if not already set
     const initialQuantities = cart.reduce((acc, item) => {
-      acc[item.id] = item.quantity || 1; // Default to 1 if not set
+      acc[item.id] = item.quantity || 1;
       return acc;
     }, {});
     setQuantities(initialQuantities);
   }, [cart]);
+
+  const showNotification = (message, type = "success") => {
+    setNotification({ message, type });
+    setTimeout(() => setNotification(null), 3000); // Auto-hide after 3 sec
+  };
 
   const updateCart = (updatedCart) => {
     setCart(updatedCart);
@@ -30,41 +34,35 @@ const CartCust = () => {
   const decreaseQuantity = (productId) => {
     setQuantities((prev) => {
       const newQuantity = (prev[productId] || 1) - 1;
-      if (newQuantity <= 0) {
-        return prev; // Prevent going below 1
-      }
-      return {
-        ...prev,
-        [productId]: newQuantity,
-      };
+      if (newQuantity <= 0) return prev;
+      return { ...prev, [productId]: newQuantity };
     });
   };
 
   const removeFromCart = (productId) => {
     const updatedCart = cart.filter((item) => item.id !== productId);
     updateCart(updatedCart);
-
-    // Remove quantity from state
     setQuantities((prev) => {
       const updatedQuantities = { ...prev };
       delete updatedQuantities[productId];
       return updatedQuantities;
     });
+
+    showNotification("Product removed from cart.", "error");
   };
 
   const placeOrder = async () => {
     if (cart.length === 0) {
-      alert("Your cart is empty!");
+      showNotification("Your cart is empty!", "error");
       return;
     }
 
     const storedUserId = Number(localStorage.getItem("userId"));
     if (!storedUserId) {
-      alert("User ID not found. Please sign in again.");
+      showNotification("User ID not found. Please sign in again.", "error");
       return;
     }
 
-    // Send final updated quantities
     const orderData = {
       userId: storedUserId,
       cartItems: cart.map((item) => ({
@@ -73,41 +71,43 @@ const CartCust = () => {
       })),
     };
 
-    console.log("Order Data:", orderData);
-
     try {
-      const response = await fetch("http://localhost:3000/api/orders/place-order", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(orderData),
-      });
+      const response = await axios.post(
+        "http://localhost:3000/api/orders/place-order",
+        orderData,
+        { headers: { "Content-Type": "application/json" } }
+      );
 
-      if (!response.ok) {
-        throw new Error("Failed to place order");
-      }
-
-      const data = await response.json();
-      alert(`Order placed successfully! Order ID: ${data.orderId}`);
-      setCart([]); // Clear cart after successful order
-      setQuantities({}); // Reset quantities
+      showNotification(`Order placed successfully! Order ID: ${response.data.orderId}`, "success");
+      setCart([]);
+      setQuantities({});
     } catch (error) {
       console.error("Error placing order:", error);
-      alert("Error placing order. Please try again.");
+      showNotification("Error placing order. Please try again.", "error");
     }
   };
 
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg">
       <h2 className="text-2xl font-bold text-gray-800 mb-4">Cart</h2>
+
+      {/* Notification */}
+      {notification && (
+        <div
+          className={`p-3 mb-4 text-white text-center rounded-lg ${
+            notification.type === "success" ? "bg-green-500" : "bg-red-500"
+          }`}
+        >
+          {notification.message}
+        </div>
+      )}
+
       {cart.length === 0 ? (
         <p className="text-gray-600 text-lg">Your cart is empty.</p>
       ) : (
         <ul className="space-y-4">
           {cart.map((product) => (
-            <li
-              key={product.id}
-              className="flex justify-between items-center bg-gray-100 p-4 rounded-lg shadow-md"
-            >
+            <li key={product.id} className="flex justify-between items-center bg-gray-100 p-4 rounded-lg shadow-md">
               <div>
                 <p className="text-lg font-semibold text-gray-800">{product.name}</p>
                 <p className="text-gray-600">Rs {product.price} x {quantities[product.id] || 1}</p>

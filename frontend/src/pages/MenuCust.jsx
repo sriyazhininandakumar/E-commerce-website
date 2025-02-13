@@ -1,15 +1,22 @@
 import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
+import axios from "axios";
 
 const MenuCust = () => {
   const [products, setProducts] = useState([]);
   const { cart, setCart } = useOutletContext();
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/products")
-      .then((response) => response.json())
-      .then((data) => setProducts(data))
-      .catch((error) => console.error("Error fetching products:", error));
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get("http://localhost:3000/api/products");
+        setProducts(response.data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    fetchProducts();
   }, []);
 
   const addToCart = (product) => {

@@ -1,9 +1,9 @@
 ### enhancements
 
-- [ ] json.stringyfy
-- [ ] tailwind notifications
-- [ ] axios
-- [ ] what is an object. 
+- [x] json.stringyfy
+- [x] tailwind notifications
+- [x] axios
+- [x] what is an object. 
 - [X] setproduct must be an object.use Useref
 - [ ] Add pictures for products
 - [ ] Best practise for storing pictures

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 const ManufacturerOrders = () => {
   const [orders, setOrders] = useState([]);
@@ -11,13 +12,10 @@ const ManufacturerOrders = () => {
 
   const fetchOrders = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/manufacturers/orders", {
+      const response = await axios.get("http://localhost:3000/api/manufacturers/orders", {
         headers: { Authorization: `Bearer ${token}` },
       });
-      const data = await response.json();
-      if (response.ok) {
-        setOrders(data.orders);
-      }
+      setOrders(response.data.orders);
     } catch (err) {
       console.error("Failed to fetch orders:", err);
     }
@@ -26,18 +24,12 @@ const ManufacturerOrders = () => {
   const updateOrderStatus = async (orderDetailId, newStatus) => {
     setUpdating(true);
     try {
-      const response = await fetch("http://localhost:3000/api/manufacturers/orders/update-status", {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ orderDetailId, newStatus }),
-      });
-      const data = await response.json();
-      if (response.ok) {
-        fetchOrders();
-      }
+      await axios.put(
+        "http://localhost:3000/api/manufacturers/orders/update-status",
+        { orderDetailId, newStatus },
+        { headers: { Authorization: `Bearer ${token}` } }
+      );
+      fetchOrders();
     } catch (err) {
       console.error("Failed to update order status:", err);
     }
@@ -65,7 +57,9 @@ const ManufacturerOrders = () => {
                   <tr key={detail.id} className="border-b border-gray-200 hover:bg-gray-100">
                     <td className="py-3 px-6 text-left whitespace-nowrap">{order.id}</td>
                     <td className="py-3 px-6 text-left">{detail.Product.name}</td>
-                    <td className="py-3 px-6 text-left">{order.User.name} ({order.User.email})</td>
+                    <td className="py-3 px-6 text-left">
+                      {order.User.name} ({order.User.email})
+                    </td>
                     <td className="py-3 px-6 text-left font-medium text-blue-600">{detail.status}</td>
                     <td className="py-3 px-6 text-center">
                       <button
@@ -81,7 +75,9 @@ const ManufacturerOrders = () => {
               )
             ) : (
               <tr>
-                <td colSpan="5" className="text-center py-4 text-gray-600">No orders available</td>
+                <td colSpan="5" className="text-center py-4 text-gray-600">
+                  No orders available
+                </td>
               </tr>
             )}
           </tbody>
