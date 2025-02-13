@@ -9,7 +9,7 @@ const CustomerDashboard = () => {
   return (
     <div>
       
-      <NavCust />
+      <NavCust cart={cart} />
 
 
       {location.pathname === "/customer" && (
