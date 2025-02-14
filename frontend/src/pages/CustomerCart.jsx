@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import axios from "axios";
 
-const CartCust = () => {
+const CustomerCart = () => {
   const { cart, setCart } = useOutletContext();
   const [quantities, setQuantities] = useState({});
   const [notification, setNotification] = useState(null); // New notification state
@@ -149,4 +149,4 @@ const CartCust = () => {
   );
 };
 
-export default CartCust;
+export default CustomerCart;

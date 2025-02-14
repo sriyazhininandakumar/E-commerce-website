@@ -27,10 +27,16 @@ const SignIn = () => {
         localStorage.setItem("token", data.accessToken);
         localStorage.setItem("role", data.role);
         localStorage.setItem("userId", data.id);
+        localStorage.setItem("admin", JSON.stringify({ name: data.name, role: data.role })); 
+        localStorage.setItem("manufacturer", JSON.stringify({ name: data.name, role: data.role }));
+        localStorage.setItem("customer", JSON.stringify({ name: data.name, role: data.role })); 
+        console.log(localStorage.getItem("admin"));
+        console.log(localStorage.getItem("manufacturer"));
+        console.log(localStorage.getItem("customer"));
 
         if (data.role === "Customer") navigate("/customer");
-        else if (data.role === "Admin") navigate("/admin");
-        else if (data.role === "Manufacturer") navigate("/manufacturer");
+        else if (data.role === "Admin") navigate("/admin/home");
+        else if (data.role === "Manufacturer") navigate("/manufacturer/home");
       } else {
         setMessage(data.message || "Invalid credentials!");
       }

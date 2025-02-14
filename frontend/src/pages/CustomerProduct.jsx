@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import axios from "axios";
 
-const MenuCust = () => {
+const CustomerProduct = () => {
   const [products, setProducts] = useState([]);
   const { cart, setCart } = useOutletContext();
 
@@ -34,7 +34,7 @@ const MenuCust = () => {
             key={product.id}
             className="border border-gray-300 rounded-lg shadow-md p-4 bg-white text-center"
           >
-            {/* ✅ Display Product Image */}
+           
             <img src={product.imageUrl} alt={product.name} className="w-32 h-32 object-cover mx-auto rounded" />
 
 
@@ -58,4 +58,4 @@ const MenuCust = () => {
   );
 };
 
-export default MenuCust;
+export default CustomerProduct;

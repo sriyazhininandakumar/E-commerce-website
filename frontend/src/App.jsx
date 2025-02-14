@@ -3,11 +3,11 @@ import "./index.css";
 import Signup from "./pages/Signup";
 import Signin from "./pages/Signin";
 import Customer from "./pages/Customer";  
-import Admin from "./pages/Admin";
-import Manufacturer from "./pages/Manufacturer";
-import MenuCust from "./pages/MenuCust";
-import ProfileCust from "./pages/ProfileCust";
-import CartCust from "./pages/CartCust";
+import AdminLayout from "./pages/AdminLayout";
+import ManufacturerLayout from "./pages/ManufacturerLayout";
+import CustomerProduct from "./pages/CustomerProduct";
+import CustomerProfile from "./pages/CustomerProfile";
+import CustomerCart from "./pages/CustomerCart";
 
 function App() {
   return (
@@ -15,15 +15,15 @@ function App() {
       <Routes>
         <Route path="/signup" element={<Signup />} />
         <Route path="/" element={<Signin />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/manufacturer" element={<Manufacturer />} />
+        <Route path="/admin/*" element={<AdminLayout/>} />
+        <Route path="/manufacturer/*" element={<ManufacturerLayout />} />
 
-        {/* Customer Dashboard with Home Page at /customer */}
+
         <Route path="/customer" element={<Customer />}>
-          <Route index element={<div />} /> {/* Placeholder for home content in CustomerDashboard */}
-          <Route path="menu" element={<MenuCust />} />
-          <Route path="profile" element={<ProfileCust />} />
-          <Route path="cart" element={<CartCust />} />
+          <Route index element={<div />} /> 
+          <Route path="menu" element={<CustomerProduct />} />
+          <Route path="profile" element={<CustomerProfile />} />
+          <Route path="cart" element={<CustomerCart />} />
         </Route>
       </Routes>
     </Router>

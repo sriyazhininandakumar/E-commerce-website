@@ -11,10 +11,11 @@
 - [x] add quantity in cart
 
 
-- [ ] change the component names of customer 
-- [ ] add signout
-- [ ] manufacturer - nav bar - show username and role
-- [ ] push enhancements in git
+
+- [x] change the component names of customer 
+- [x] add signout
+- [x] manufacturer - nav bar - show username and role
+- [x] push enhancements in git
 - [ ] create pull request and merge in github
 - [ ] article writeup
 
