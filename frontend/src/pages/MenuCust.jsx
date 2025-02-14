@@ -10,6 +10,7 @@ const MenuCust = () => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get("http://localhost:3000/api/products");
+        console.log("fetched Products : ",response.data);
         setProducts(response.data);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -33,6 +34,15 @@ const MenuCust = () => {
             key={product.id}
             className="border border-gray-300 rounded-lg shadow-md p-4 bg-white text-center"
           >
+            {/* ✅ Display Product Image */}
+            <img src={product.imageUrl} alt={product.name} className="w-32 h-32 object-cover mx-auto rounded" />
+
+
+
+
+
+
+            
             <h3 className="text-xl font-semibold">{product.name}</h3>
             <p className="text-gray-600">Price: ₹{product.price}</p>
             <button

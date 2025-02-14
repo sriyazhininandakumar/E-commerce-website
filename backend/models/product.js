@@ -25,6 +25,11 @@ module.exports = (sequelize, DataTypes) => {
     price: {
       type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
+    },
+    imageUrl:{
+      type: DataTypes.STRING,
+      allowNull:true,
+
     }
   }, {
     sequelize,

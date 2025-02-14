@@ -11,6 +11,7 @@ const manufacturerProductRoutes = require('./routes/manufacturerProduct.routes')
 const orderRoutes = require('./routes/order.routes');
 const manufacturerRoutes = require('./routes/manufacturer.routes');
 
+
 app.use(express.json());
 app.use(cors());
 

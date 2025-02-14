@@ -4,14 +4,16 @@ const { Product } = require('../models');
 
 const router = express.Router();
 
+// Create product with image URL
 router.post('/', isAdmin, async (req, res) => {
     try {
-        const { name, description, price } = req.body;
+        const { name, description, price, imageUrl } = req.body;
+
         if (!name || price == null || price <= 0) {
             return res.status(400).json({ message: 'Invalid input: Name and valid price are required' });
         }
 
-        const product = await Product.create({ name, description, price });
+        const product = await Product.create({ name, description, price, imageUrl });
         res.status(201).json({ message: "Product created successfully", product });
     } catch (error) {
         console.error("Error creating product:", error);
@@ -19,10 +21,10 @@ router.post('/', isAdmin, async (req, res) => {
     }
 });
 
-
+// Get all products
 router.get('/', async (req, res) => {
     try {
-        const products = await Product.findAll(); 
+        const products = await Product.findAll();
         res.status(200).json(products);
     } catch (error) {
         console.error("Error fetching products:", error);
@@ -30,21 +32,17 @@ router.get('/', async (req, res) => {
     }
 });
 
-
-
-
-
+// Update product including image URL
 router.put('/:id', isAdmin, async (req, res) => {
     try {
-        const { name, description, price } = req.body;
+        const { name, description, price, imageUrl } = req.body;
         const product = await Product.findByPk(req.params.id);
 
         if (!product) {
             return res.status(404).json({ message: 'Product not found' });
         }
 
-        
-        await product.update({ name, description, price });
+        await product.update({ name, description, price, imageUrl });
 
         res.status(200).json({ message: 'Product updated successfully', product });
     } catch (error) {
@@ -54,10 +52,12 @@ router.put('/:id', isAdmin, async (req, res) => {
 });
 
 
+
+// Delete a product
 router.delete('/:id', isAdmin, async (req, res) => {
     try {
         const product = await Product.findByPk(req.params.id);
-        
+
         if (!product) {
             return res.status(404).json({ message: 'Product not found' });
         }
