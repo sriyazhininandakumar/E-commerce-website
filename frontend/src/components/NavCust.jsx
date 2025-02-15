@@ -10,16 +10,17 @@ const NavCust = ({ cart }) => {
           <li>
             <Link
               to="/customer/products"
-              className="text-white text-lg font-semibold hover:text-gray-400 transition"
+              className="text-white text-lg hover:text-gray-400 transition"
             >
-              Products
+              PRODUCTS
             </Link>
           </li>
         </ul>
 
-        <h1 className="text-2xl font-bold text-white">
-          <Link to="/customer" className="hover:text-gray-400 transition">
-            La Blanca
+        <h1 className="text-XL  text-white">
+          <Link to="/customer" 
+          className="text-white text-lg hover:text-gray-400 transition">
+            LA BLANCA
           </Link>
         </h1>
 
@@ -27,17 +28,17 @@ const NavCust = ({ cart }) => {
           <li>
             <Link
               to="/customer/profile"
-              className="text-white text-lg font-semibold hover:text-gray-400 transition"
+              className="text-white text-lg hover:text-gray-400 transition"
             >
-              Profile
+              PROFILE
             </Link>
           </li>
           <li className="relative">
             <Link
               to="/customer/cart"
-              className="text-white text-lg font-semibold hover:text-gray-400 transition"
+              className="text-white text-lg hover:text-gray-400 transition"
             >
-              Cart
+              CART
             </Link>
             {cart.length > 0 && (
               <span className="absolute -top-2 -right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
