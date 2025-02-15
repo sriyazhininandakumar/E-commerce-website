@@ -5,7 +5,7 @@ const { isAuthenticated, isManufacturer } = require('../middlewares/auth.middlew
 const router = express.Router();
 
 
-
+//only manufacturers can update the status
 router.put('/orders/update-status', isAuthenticated, isManufacturer, async (req, res) => {
     try {
         const { orderDetailId, newStatus } = req.body;  

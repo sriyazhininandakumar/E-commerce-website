@@ -21,7 +21,7 @@ function App() {
 
         <Route path="/customer" element={<Customer />}>
           <Route index element={<div />} /> 
-          <Route path="menu" element={<CustomerProduct />} />
+          <Route path="products" element={<CustomerProduct />} />
           <Route path="profile" element={<CustomerProfile />} />
           <Route path="cart" element={<CustomerCart />} />
         </Route>

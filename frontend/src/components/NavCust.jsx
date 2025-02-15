@@ -5,14 +5,14 @@ const NavCust = ({ cart }) => {
   return (
     <nav className="bg-black py-4 px-6">
       <div className="container mx-auto flex items-center justify-between">
-        {/* Left Side - Menu Link */}
+     
         <ul className="flex space-x-6">
           <li>
             <Link
-              to="/customer/menu"
+              to="/customer/products"
               className="text-white text-lg font-semibold hover:text-gray-400 transition"
             >
-              Menu
+              Products
             </Link>
           </li>
         </ul>

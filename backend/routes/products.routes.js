@@ -4,7 +4,7 @@ const { Product } = require('../models');
 
 const router = express.Router();
 
-// Create product with image URL
+// Only admin can create products
 router.post('/', isAdmin, async (req, res) => {
     try {
         const { name, description, price, imageUrl } = req.body;
@@ -21,7 +21,6 @@ router.post('/', isAdmin, async (req, res) => {
     }
 });
 
-// Get all products
 router.get('/', async (req, res) => {
     try {
         const products = await Product.findAll();
