@@ -23,7 +23,7 @@ const CustomerProduct = () => {
   const addToCart = (product, event) => {
     setCart((prevCart) => [...prevCart, product]);
 
-    // Change button text and color dynamically
+    
     event.target.innerText = "Added to Cart";
     event.target.classList.remove("bg-black", "hover:bg-gray-800");
     event.target.classList.add("bg-green-500");
