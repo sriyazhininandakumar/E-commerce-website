@@ -8,7 +8,7 @@ const Admin = () => {
     const nameRef = useRef();
     const descriptionRef = useRef();
     const priceRef = useRef();
-    const imageUrlRef = useRef(); // ✅ Added Image URL input field
+    const imageUrlRef = useRef(); 
     const manufacturerIdRef = useRef();
     const productIdRef = useRef();
 
@@ -33,7 +33,7 @@ const Admin = () => {
         const name = nameRef.current.value;
         const description = descriptionRef.current.value;
         const price = parseFloat(priceRef.current.value);
-        const imageUrl = imageUrlRef.current.value; // ✅ Capture Image URL
+        const imageUrl = imageUrlRef.current.value; 
 
         if (!name || !description || isNaN(price) || price <= 0) return alert("Invalid input!");
 
@@ -48,7 +48,7 @@ const Admin = () => {
             nameRef.current.value = "";
             descriptionRef.current.value = "";
             priceRef.current.value = "";
-            imageUrlRef.current.value = ""; // ✅ Clear Image URL field
+            imageUrlRef.current.value = ""; 
             fetchProducts();
         } catch (error) {
             alert(error.response?.data?.message || "Error adding product");
@@ -75,7 +75,7 @@ const Admin = () => {
         nameRef.current.value = product.name;
         descriptionRef.current.value = product.description;
         priceRef.current.value = product.price;
-        imageUrlRef.current.value = product.imageUrl; // ✅ Set Image URL when editing
+        imageUrlRef.current.value = product.imageUrl; 
     };
 
     const updateProduct = async () => {
@@ -85,7 +85,7 @@ const Admin = () => {
         const name = nameRef.current.value;
         const description = descriptionRef.current.value;
         const price = parseFloat(priceRef.current.value);
-        const imageUrl = imageUrlRef.current.value; // ✅ Include Image URL in update
+        const imageUrl = imageUrlRef.current.value; 
 
         if (!name || !description || isNaN(price) || price <= 0) return alert("Invalid input!");
 
@@ -101,7 +101,7 @@ const Admin = () => {
             nameRef.current.value = "";
             descriptionRef.current.value = "";
             priceRef.current.value = "";
-            imageUrlRef.current.value = ""; // ✅ Clear Image URL field
+            imageUrlRef.current.value = ""; 
             fetchProducts();
         } catch (error) {
             alert(error.response?.data?.message || "Error updating product");
@@ -140,7 +140,7 @@ const Admin = () => {
                 <input ref={nameRef} type="text" placeholder="Name" className="w-full p-2 mb-2 border rounded" />
                 <input ref={descriptionRef} type="text" placeholder="Description" className="w-full p-2 mb-2 border rounded" />
                 <input ref={priceRef} type="number" placeholder="Price" className="w-full p-2 mb-2 border rounded" />
-                <input ref={imageUrlRef} type="text" placeholder="Image URL" className="w-full p-2 mb-2 border rounded" /> {/* ✅ Added Image URL input */}
+                <input ref={imageUrlRef} type="text" placeholder="Image URL" className="w-full p-2 mb-2 border rounded" /> 
 
                 {editingProduct ? (
                     <button onClick={updateProduct} className="bg-blue-500 text-white px-4 py-2 rounded w-full hover:bg-blue-600">
