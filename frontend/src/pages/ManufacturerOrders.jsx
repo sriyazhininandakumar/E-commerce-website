@@ -64,10 +64,12 @@ const ManufacturerOrders = () => {
                     <td className="py-3 px-6 text-center">
                       <button
                         onClick={() => updateOrderStatus(detail.id, "Shipped")}
-                        disabled={updating}
-                        className="bg-blue-500 text-white py-1 px-3 rounded-lg hover:bg-blue-600 disabled:bg-gray-400"
+                        disabled={updating || detail.status === "Shipped"}
+                        className={`${
+                          detail.status === "Shipped" ? "bg-orange-500" : "bg-blue-500"
+                        } text-white py-1 px-3 rounded-lg hover:bg-blue-600 disabled:bg-gray-400`}
                       >
-                        {updating ? "Updating..." : "Mark as Shipped"}
+                        {detail.status === "Shipped" ? "Marked as Shipped" : updating ? "Updating..." : "Mark as Shipped"}
                       </button>
                     </td>
                   </tr>

@@ -1,11 +1,11 @@
 const express = require('express');
 const { Order, OrderDetails, Product, ManufacturerProduct, User } = require('../models');
 const { isAuthenticated, isManufacturer } = require('../middlewares/auth.middleware'); 
-
+const logger=require('../logger');
 const router = express.Router();
 
 
-//only manufacturers can update the status
+
 router.put('/orders/update-status', isAuthenticated, isManufacturer, async (req, res) => {
     try {
         const { orderDetailId, newStatus } = req.body;  
@@ -14,10 +14,11 @@ router.put('/orders/update-status', isAuthenticated, isManufacturer, async (req,
         
         const orderDetail = await OrderDetails.findByPk(orderDetailId);
         if (!orderDetail) {
+            logger.warn(`Order detail not found for ID: ${orderDetailId}`);
             return res.status(404).json({ message: "Order detail not found" });
         }
 
-        //if manufacturer owns the product
+       
         const manufacturerProduct = await ManufacturerProduct.findOne({
             where: { 
                 manufacturerId: manufacturerId, 
@@ -26,17 +27,20 @@ router.put('/orders/update-status', isAuthenticated, isManufacturer, async (req,
         });
 
         if (!manufacturerProduct) {
+            logger.warn(`Manufacturer with ID: ${manufacturerId} is not authorized to update order detail with ID: ${orderDetailId}`);
             return res.status(403).json({ message: "You are not authorized to update this order" });
         }
 
-        // update the status
+       
         orderDetail.status = newStatus;
         await orderDetail.save();
+
+        logger.info(`Order status updated for orderDetailId: ${orderDetailId} by manufacturerId: ${manufacturerId}`);
 
         return res.status(200).json({ message: "Order status updated successfully" });
 
     } catch (error) {
-        console.error(error);
+        logger.error(`Error updating order status: ${error.message}`);
         res.status(500).json({ message: "Error updating order status", error: error.message });
     }
 });
