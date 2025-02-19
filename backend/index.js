@@ -26,6 +26,6 @@ app.use('/api/customer', customerRoutes);
 
 
 app.listen(PORT, () => {
-    logger.info(`Server running on port number ${PORT}`);
+    logger.info(`Server running on port numberss ${PORT}`);
 
 });
