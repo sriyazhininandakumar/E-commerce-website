@@ -183,3 +183,17 @@
 2025-02-19T16:54:30.815Z [INFO]: Manufacturer access granted: 3
 2025-02-19T16:54:30.816Z [DEBUG]: Fetching orders for manufacturer ID: 3
 2025-02-19T16:54:30.819Z [DEBUG]: Manufacturer ID: 3 owns products: 1, 2, 3, 4, 5, 11, 4
+2025-02-19T18:21:44.591Z [DEBUG]: Checking authentication...
+2025-02-19T18:21:44.634Z [DEBUG]: Token decoded: {"id":3,"role":"Manufacturer","iat":1739983340,"exp":1740069740}
+2025-02-19T18:21:44.765Z [INFO]: User authenticated: 3 - Manufacturer
+2025-02-19T18:21:44.767Z [DEBUG]: Checking manufacturer access...
+2025-02-19T18:21:44.768Z [INFO]: Manufacturer access granted: 3
+2025-02-19T18:21:44.769Z [DEBUG]: Fetching orders for manufacturer ID: 3
+2025-02-19T18:21:44.776Z [DEBUG]: Manufacturer ID: 3 owns products: 1, 2, 3, 4, 5, 11, 4
+2025-02-19T18:21:44.805Z [DEBUG]: Checking authentication...
+2025-02-19T18:21:44.808Z [DEBUG]: Token decoded: {"id":3,"role":"Manufacturer","iat":1739983340,"exp":1740069740}
+2025-02-19T18:21:44.816Z [INFO]: User authenticated: 3 - Manufacturer
+2025-02-19T18:21:44.817Z [DEBUG]: Checking manufacturer access...
+2025-02-19T18:21:44.817Z [INFO]: Manufacturer access granted: 3
+2025-02-19T18:21:44.818Z [DEBUG]: Fetching orders for manufacturer ID: 3
+2025-02-19T18:21:44.822Z [DEBUG]: Manufacturer ID: 3 owns products: 1, 2, 3, 4, 5, 11, 4
