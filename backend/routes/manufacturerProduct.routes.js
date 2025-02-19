@@ -6,7 +6,7 @@ const logger = require('../logger');
 router.post('/', async (req, res) => {
     try {
         const { manufacturerId, productId } = req.body;
-
+        logger.debug(`Received request to link Manufacturer ID: ${manufacturerId} with Product ID: ${productId}`);
         
         if (!manufacturerId || !productId) {
             logger.warn("Manufacturer ID and Product ID are required");  
@@ -27,7 +27,7 @@ router.post('/', async (req, res) => {
             return res.status(404).json({ message: "Product not found" });
         }
 
-
+        logger.debug(`Creating manufacturer-product relation: Manufacturer ID: ${manufacturerId}, Product ID: ${productId}`);
         await ManufacturerProduct.create({ manufacturerId, productId });
         logger.info(`Manufacturer-Product relation added: Manufacturer ID ${manufacturerId}, Product ID ${productId}`);
 

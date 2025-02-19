@@ -8,6 +8,7 @@ const router = express.Router();
 router.get('/orders', isAuthenticated, isCustomer, async (req, res) => {
     try {
         const customerId = req.user.id;
+        logger.debug(`Fetching orders for customer ID: ${customerId}`);
 
         const orders = await Order.findAll({
             where: { userId: customerId },
@@ -25,6 +26,7 @@ router.get('/orders', isAuthenticated, isCustomer, async (req, res) => {
             logger.info(`No orders found for customer with ID: ${customerId}`);
             return res.status(200).json({ message: "No orders found" });
         }
+        logger.debug(`Fetched ${orders.length} orders for customer ID: ${customerId}`);
         logger.info(`Successfully fetched orders for customer with ID: ${customerId}`);
         
         return res.status(200).json({

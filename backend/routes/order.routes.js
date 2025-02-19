@@ -7,6 +7,7 @@ router.post('/place-order', async (req, res) => {
     const transaction = await sequelize.transaction(); 
     try {
         const { userId, cartItems } = req.body;  
+        logger.debug(`Received order request: User ID = ${userId}, Cart Items = ${JSON.stringify(cartItems)}`);
         logger.info(`New order request received for user ID: ${userId}`);
 
 

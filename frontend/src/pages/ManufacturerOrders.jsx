@@ -67,7 +67,7 @@ const ManufacturerOrders = () => {
                         disabled={updating || detail.status === "Shipped"}
                         className={`${
                           detail.status === "Shipped" ? "bg-orange-500" : "bg-blue-500"
-                        } text-white py-1 px-3 rounded-lg hover:bg-blue-600 disabled:bg-gray-400`}
+                        } text-white py-1 px-3 rounded-lg hover:bg-blue-600 disabled:bg-orange-400`}
                       >
                         {detail.status === "Shipped" ? "Marked as Shipped" : updating ? "Updating..." : "Mark as Shipped"}
                       </button>

@@ -89,3 +89,97 @@
 2025-02-18T14:21:21.042Z [INFO]: Order status updated for orderDetailId: 52 by manufacturerId: 3
 2025-02-18T14:21:26.932Z [INFO]: Successfully fetched orders for customer with ID: 5
 2025-02-18T14:21:26.946Z [INFO]: Successfully fetched orders for customer with ID: 5
+2025-02-18T14:27:42.126Z [INFO]: Successfully fetched orders for customer with ID: 5
+2025-02-18T14:27:42.146Z [INFO]: Successfully fetched orders for customer with ID: 5
+2025-02-18T14:29:27.510Z [INFO]: Fetched 9 products
+2025-02-18T14:29:27.514Z [INFO]: Fetched 9 products
+2025-02-18T14:29:31.041Z [INFO]: Successfully fetched orders for customer with ID: 5
+2025-02-18T14:29:31.056Z [INFO]: Successfully fetched orders for customer with ID: 5
+2025-02-18T14:29:44.393Z [INFO]: Received sign-in request for email: ramasamy@gmail.com
+2025-02-18T14:29:44.684Z [INFO]: User signed in successfully with email: ramasamy@gmail.com
+2025-02-18T14:30:21.932Z [INFO]: Received sign-in request for email: adhithi@gmail.com
+2025-02-18T14:30:22.217Z [INFO]: User signed in successfully with email: adhithi@gmail.com
+2025-02-18T14:30:25.181Z [INFO]: Fetched 9 products
+2025-02-18T14:30:25.185Z [INFO]: Fetched 9 products
+2025-02-18T14:30:29.182Z [INFO]: New order request received for user ID: 5
+2025-02-18T14:30:29.252Z [INFO]: Order created successfully with ID: 43
+2025-02-18T14:30:29.263Z [INFO]: Added product ID 5 to order ID 43
+2025-02-18T14:30:29.267Z [INFO]: Order ID 43 placed successfully
+2025-02-18T14:30:56.978Z [INFO]: Received sign-in request for email: ramasamy@gmail.com
+2025-02-18T14:30:57.401Z [INFO]: User signed in successfully with email: ramasamy@gmail.com
+2025-02-18T14:31:02.695Z [INFO]: Order status updated for orderDetailId: 53 by manufacturerId: 3
+2025-02-18T14:31:23.330Z [INFO]: Received sign-in request for email: adhithi@gmail.com
+2025-02-18T14:31:23.616Z [INFO]: User signed in successfully with email: adhithi@gmail.com
+2025-02-18T14:31:25.940Z [INFO]: Successfully fetched orders for customer with ID: 5
+2025-02-18T14:31:25.955Z [INFO]: Successfully fetched orders for customer with ID: 5
+2025-02-18T14:47:34.741Z [INFO]: Successfully fetched orders for customer with ID: 5
+2025-02-18T14:47:34.752Z [INFO]: Successfully fetched orders for customer with ID: 5
+2025-02-18T14:47:45.404Z [INFO]: Received sign-in request for email: ramasamy@gmail.com
+2025-02-18T14:47:45.826Z [INFO]: User signed in successfully with email: ramasamy@gmail.com
+2025-02-18T16:19:54.356Z [INFO]: Received sign-in request for email: adhithi@gmail.com
+2025-02-18T16:19:54.880Z [INFO]: User signed in successfully with email: adhithi@gmail.com
+2025-02-18T16:19:59.928Z [INFO]: Successfully fetched orders for customer with ID: 5
+2025-02-18T16:19:59.939Z [INFO]: Successfully fetched orders for customer with ID: 5
+2025-02-18T16:21:56.892Z [INFO]: Fetched 9 products
+2025-02-18T16:21:56.902Z [INFO]: Fetched 9 products
+2025-02-18T16:32:59.010Z [INFO]: Fetched 9 products
+2025-02-18T16:32:59.016Z [INFO]: Fetched 9 products
+2025-02-18T16:33:09.730Z [INFO]: Fetched 9 products
+2025-02-18T16:33:09.734Z [INFO]: Fetched 9 products
+2025-02-18T17:11:04.524Z [INFO]: Fetched 9 products
+2025-02-18T17:11:04.529Z [INFO]: Fetched 9 products
+2025-02-18T17:29:34.929Z [INFO]: Fetched 9 products
+2025-02-18T17:29:34.937Z [INFO]: Fetched 9 products
+2025-02-19T16:07:15.985Z [INFO]: Server running on port 3000
+2025-02-19T16:30:41.004Z [INFO]: Received sign-in request for email: adhithi@gmail.com
+2025-02-19T16:30:41.460Z [INFO]: User signed in successfully with email: adhithi@gmail.com
+2025-02-19T16:31:35.764Z [INFO]: Received registration request for email: saru@gmail.com
+2025-02-19T16:31:35.928Z [INFO]: User registered successfully with email: saru@gmail.com
+2025-02-19T16:32:05.689Z [INFO]: Received sign-in request for email: adhithi@gmail.com
+2025-02-19T16:32:05.830Z [INFO]: User signed in successfully with email: adhithi@gmail.com
+2025-02-19T16:32:08.828Z [INFO]: Fetched 9 products
+2025-02-19T16:32:08.835Z [INFO]: Fetched 9 products
+2025-02-19T16:32:14.309Z [INFO]: New order request received for user ID: 5
+2025-02-19T16:32:14.376Z [INFO]: Order created successfully with ID: 44
+2025-02-19T16:32:14.389Z [INFO]: Added product ID 10 to order ID 44
+2025-02-19T16:32:14.395Z [INFO]: Added product ID 5 to order ID 44
+2025-02-19T16:32:14.399Z [INFO]: Order ID 44 placed successfully
+2025-02-19T16:32:27.979Z [INFO]: Received sign-in request for email: ramasamy@gmail.com
+2025-02-19T16:32:28.101Z [INFO]: User signed in successfully with email: ramasamy@gmail.com
+2025-02-19T16:32:35.334Z [INFO]: Order status updated for orderDetailId: 55 by manufacturerId: 3
+2025-02-19T16:37:07.844Z [INFO]: Server running on port 3000
+2025-02-19T16:37:21.781Z [INFO]: Received registration request for email: saru@gmail.com
+2025-02-19T16:37:22.072Z [WARN]: Email already associated with an account: saru@gmail.com
+2025-02-19T16:37:43.280Z [INFO]: Received sign-in request for email: saru@gmail.com
+2025-02-19T16:37:43.429Z [INFO]: User signed in successfully with email: saru@gmail.com
+2025-02-19T16:42:06.913Z [INFO]: Server running on port 3000
+2025-02-19T16:42:20.214Z [INFO]: Received sign-in request for email: ramasamy@gmail.com
+2025-02-19T16:42:20.698Z [INFO]: User signed in successfully with email: ramasamy@gmail.com
+2025-02-19T16:42:23.619Z [DEBUG]: Checking authentication...
+2025-02-19T16:42:23.622Z [DEBUG]: Token decoded: {"id":3,"role":"Manufacturer","iat":1739983340,"exp":1740069740}
+2025-02-19T16:42:23.627Z [INFO]: User authenticated: 3 - Manufacturer
+2025-02-19T16:42:23.628Z [DEBUG]: Checking manufacturer access...
+2025-02-19T16:42:23.629Z [INFO]: Manufacturer access granted: 3
+2025-02-19T16:42:23.630Z [DEBUG]: Fetching orders for manufacturer ID: 3
+2025-02-19T16:42:23.634Z [DEBUG]: Manufacturer ID: 3 owns products: 1, 2, 3, 4, 5, 11, 4
+2025-02-19T16:42:23.648Z [DEBUG]: Checking authentication...
+2025-02-19T16:42:23.650Z [DEBUG]: Token decoded: {"id":3,"role":"Manufacturer","iat":1739983340,"exp":1740069740}
+2025-02-19T16:42:23.653Z [INFO]: User authenticated: 3 - Manufacturer
+2025-02-19T16:42:23.654Z [DEBUG]: Checking manufacturer access...
+2025-02-19T16:42:23.655Z [INFO]: Manufacturer access granted: 3
+2025-02-19T16:42:23.655Z [DEBUG]: Fetching orders for manufacturer ID: 3
+2025-02-19T16:42:23.658Z [DEBUG]: Manufacturer ID: 3 owns products: 1, 2, 3, 4, 5, 11, 4
+2025-02-19T16:54:30.707Z [DEBUG]: Checking authentication...
+2025-02-19T16:54:30.710Z [DEBUG]: Token decoded: {"id":3,"role":"Manufacturer","iat":1739983340,"exp":1740069740}
+2025-02-19T16:54:30.787Z [INFO]: User authenticated: 3 - Manufacturer
+2025-02-19T16:54:30.788Z [DEBUG]: Checking manufacturer access...
+2025-02-19T16:54:30.789Z [INFO]: Manufacturer access granted: 3
+2025-02-19T16:54:30.790Z [DEBUG]: Fetching orders for manufacturer ID: 3
+2025-02-19T16:54:30.793Z [DEBUG]: Manufacturer ID: 3 owns products: 1, 2, 3, 4, 5, 11, 4
+2025-02-19T16:54:30.808Z [DEBUG]: Checking authentication...
+2025-02-19T16:54:30.810Z [DEBUG]: Token decoded: {"id":3,"role":"Manufacturer","iat":1739983340,"exp":1740069740}
+2025-02-19T16:54:30.814Z [INFO]: User authenticated: 3 - Manufacturer
+2025-02-19T16:54:30.815Z [DEBUG]: Checking manufacturer access...
+2025-02-19T16:54:30.815Z [INFO]: Manufacturer access granted: 3
+2025-02-19T16:54:30.816Z [DEBUG]: Fetching orders for manufacturer ID: 3
+2025-02-19T16:54:30.819Z [DEBUG]: Manufacturer ID: 3 owns products: 1, 2, 3, 4, 5, 11, 4

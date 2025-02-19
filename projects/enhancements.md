@@ -21,13 +21,22 @@
 
 
 - [x] git branch in remote
-- [x] git pull
-- [ ] logging-article write
-- [ ] exception handling (include more exception handling)
+- [x] git pull 
+- [x] logging-article write
+- [X] exception handling (include more exception handling) in node js 
 - [x] order details for customer
 - [ ] figma and navbar change 
 - [ ] api testing
 - [ ] ui/ux testing
+
+- [x] .git(videos) 
+- [x] why 486 changes?
+- [ ] Do research about exception handling - node, java, javascript
+- [x] how to remove a file in github
+- [x] what should go in github and what should not
+- [x] debug in logging(imp)
+- [x] only git add (file name)
+- [x] cancel a commit in a branch. revert a commit 
 
 
 

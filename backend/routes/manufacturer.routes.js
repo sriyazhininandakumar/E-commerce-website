@@ -11,7 +11,7 @@ router.put('/orders/update-status', isAuthenticated, isManufacturer, async (req,
         const { orderDetailId, newStatus } = req.body;  
         const manufacturerId = req.user.id;  
 
-        
+        logger.debug('Manu Id:${manufacturerId}')
         const orderDetail = await OrderDetails.findByPk(orderDetailId);
         if (!orderDetail) {
             logger.warn(`Order detail not found for ID: ${orderDetailId}`);
@@ -57,7 +57,7 @@ router.get('/orders', isAuthenticated, isManufacturer, async (req, res) => {
     try {
         const manufacturerId = req.user.id; 
 
-       
+        logger.debug(`Fetching orders for manufacturer ID: ${manufacturerId}`);
         const manufacturerProducts = await ManufacturerProduct.findAll({
             where: { manufacturerId },
             attributes: ['productId']
@@ -68,7 +68,7 @@ router.get('/orders', isAuthenticated, isManufacturer, async (req, res) => {
         }
 
         const productIds = manufacturerProducts.map(mp => mp.productId);
-
+        logger.debug(`Manufacturer ID: ${manufacturerId} owns products: ${productIds.join(", ")}`);
        
         const orders = await Order.findAll({
             include: [
