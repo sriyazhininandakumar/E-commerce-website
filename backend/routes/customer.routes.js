@@ -15,7 +15,7 @@ router.get('/orders', isAuthenticated, isCustomer, async (req, res) => {
             include: [
                 {
                     model: OrderDetails,
-                    attributes: ['productId', 'status'], 
+                    attributes: ['productId', 'quantity','status'], 
                     include: [{ model: Product, attributes: ['name'] }]
                 }
             ],
@@ -35,6 +35,7 @@ router.get('/orders', isAuthenticated, isCustomer, async (req, res) => {
                 products: order.OrderDetails.map(detail => ({
                     productId: detail.productId,   
                     productName: detail.Product?.name, 
+                    quantity: detail.quantity,
                     status: detail.status  
                 }))
             }))

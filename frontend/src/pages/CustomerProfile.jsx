@@ -5,11 +5,8 @@ const CustomerProfile = () => {
     const navigate = useNavigate();
     const [customer, setCustomer] = useState(null);
     const [orders, setOrders] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
 
     useEffect(() => {
-        // Fetch customer data from localStorage
         console.log("Fetching customer from localStorage...");
         const storedCustomer = localStorage.getItem("customer");
         console.log("Stored Customer Data:", storedCustomer);
@@ -24,7 +21,6 @@ const CustomerProfile = () => {
             }
         }
 
-        // Fetch orders for the authenticated customer
         const fetchOrders = async () => {
             try {
                 const token = localStorage.getItem("token");
@@ -37,13 +33,11 @@ const CustomerProfile = () => {
                 });
 
                 const data = await response.json();
-                if (!response.ok) throw new Error(data.message || "Failed to fetch orders");
-
-                setOrders(data.orders);
-            } catch (err) {
-                setError(err.message);
-            } finally {
-                setLoading(false);
+                if (response.ok) {
+                    setOrders(data.orders);
+                }
+            } catch (error) {
+                console.error("Error fetching orders:", error);
             }
         };
 
@@ -62,14 +56,6 @@ const CustomerProfile = () => {
                 <p>Loading customer data...</p>
             </div>
         );
-    }
-
-    if (loading) {
-        return <div>Loading orders...</div>;
-    }
-
-    if (error) {
-        return <div className="text-red-500">{error}</div>;
     }
 
     return (
@@ -92,6 +78,7 @@ const CustomerProfile = () => {
                     <thead className="bg-gray-200">
                         <tr>
                             <th className="px-6 py-3 text-left font-semibold text-gray-700 border-b">Product Name</th>
+                            <th className="px-6 py-3 text-left font-semibold text-gray-700 border-b">Quantity</th>
                             <th className="px-6 py-3 text-left font-semibold text-gray-700 border-b">Status</th>
                         </tr>
                     </thead>
@@ -101,6 +88,7 @@ const CustomerProfile = () => {
                                 {order.products.map((product, index) => (
                                     <tr key={index} className="border-b">
                                         <td className="px-6 py-4 text-gray-800">{product.productName}</td>
+                                        <td className="px-6 py-4 text-gray-800">{product.quantity}</td>
                                         <td className="px-6 py-4 text-gray-800">
                                             <span
                                                 className={`${

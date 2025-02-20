@@ -197,3 +197,252 @@
 2025-02-19T18:21:44.817Z [INFO]: Manufacturer access granted: 3
 2025-02-19T18:21:44.818Z [DEBUG]: Fetching orders for manufacturer ID: 3
 2025-02-19T18:21:44.822Z [DEBUG]: Manufacturer ID: 3 owns products: 1, 2, 3, 4, 5, 11, 4
+2025-02-20T11:56:16.825Z [INFO]: Server running on port 3000
+2025-02-20T11:57:03.751Z [INFO]: Received sign-in request for email: sriyazhininandakumar30@gmail.com
+2025-02-20T11:57:04.370Z [INFO]: User signed in successfully with email: sriyazhininandakumar30@gmail.com
+2025-02-20T12:19:27.821Z [DEBUG]: Checking authentication...
+2025-02-20T12:19:27.826Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:19:27.890Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:19:27.891Z [DEBUG]: Checking customer access...
+2025-02-20T12:19:27.892Z [INFO]: Customer access granted: 10
+2025-02-20T12:19:27.893Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:19:27.912Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:19:27.913Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:19:27.920Z [DEBUG]: Checking authentication...
+2025-02-20T12:19:27.922Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:19:27.930Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:19:27.931Z [DEBUG]: Checking customer access...
+2025-02-20T12:19:27.932Z [INFO]: Customer access granted: 10
+2025-02-20T12:19:27.933Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:19:27.942Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:19:27.943Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:19:31.525Z [INFO]: Fetched 9 products
+2025-02-20T12:19:31.532Z [INFO]: Fetched 9 products
+2025-02-20T12:22:54.985Z [INFO]: Fetched 9 products
+2025-02-20T12:22:54.992Z [INFO]: Fetched 9 products
+2025-02-20T12:22:57.428Z [DEBUG]: Checking authentication...
+2025-02-20T12:22:57.431Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:22:57.439Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:22:57.440Z [DEBUG]: Checking customer access...
+2025-02-20T12:22:57.440Z [INFO]: Customer access granted: 10
+2025-02-20T12:22:57.441Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:22:57.451Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:22:57.452Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:22:57.456Z [DEBUG]: Checking authentication...
+2025-02-20T12:22:57.459Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:22:57.467Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:22:57.468Z [DEBUG]: Checking customer access...
+2025-02-20T12:22:57.469Z [INFO]: Customer access granted: 10
+2025-02-20T12:22:57.470Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:22:57.478Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:22:57.479Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:23:02.279Z [DEBUG]: Checking authentication...
+2025-02-20T12:23:02.281Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:23:02.288Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:23:02.289Z [DEBUG]: Checking customer access...
+2025-02-20T12:23:02.289Z [INFO]: Customer access granted: 10
+2025-02-20T12:23:02.290Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:23:02.297Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:23:02.297Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:23:02.300Z [DEBUG]: Checking authentication...
+2025-02-20T12:23:02.302Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:23:02.307Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:23:02.308Z [DEBUG]: Checking customer access...
+2025-02-20T12:23:02.308Z [INFO]: Customer access granted: 10
+2025-02-20T12:23:02.309Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:23:02.315Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:23:02.316Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:24:32.936Z [DEBUG]: Checking authentication...
+2025-02-20T12:24:32.939Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:24:33.087Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:24:33.088Z [DEBUG]: Checking customer access...
+2025-02-20T12:24:33.089Z [INFO]: Customer access granted: 10
+2025-02-20T12:24:33.090Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:24:33.102Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:24:33.103Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:24:33.107Z [DEBUG]: Checking authentication...
+2025-02-20T12:24:33.110Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:24:33.115Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:24:33.116Z [DEBUG]: Checking customer access...
+2025-02-20T12:24:33.116Z [INFO]: Customer access granted: 10
+2025-02-20T12:24:33.116Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:24:33.121Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:24:33.122Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:28:11.503Z [DEBUG]: Checking authentication...
+2025-02-20T12:28:11.505Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:28:11.604Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:28:11.605Z [DEBUG]: Checking customer access...
+2025-02-20T12:28:11.605Z [INFO]: Customer access granted: 10
+2025-02-20T12:28:11.606Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:28:11.612Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:28:11.613Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:28:14.504Z [DEBUG]: Checking authentication...
+2025-02-20T12:28:14.507Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:28:14.510Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:28:14.511Z [DEBUG]: Checking customer access...
+2025-02-20T12:28:14.511Z [INFO]: Customer access granted: 10
+2025-02-20T12:28:14.511Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:28:14.515Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:28:14.516Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:28:14.519Z [DEBUG]: Checking authentication...
+2025-02-20T12:28:14.520Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:28:14.525Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:28:14.525Z [DEBUG]: Checking customer access...
+2025-02-20T12:28:14.526Z [INFO]: Customer access granted: 10
+2025-02-20T12:28:14.526Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:28:14.531Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:28:14.531Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:28:15.482Z [DEBUG]: Checking authentication...
+2025-02-20T12:28:15.484Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:28:15.487Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:28:15.487Z [DEBUG]: Checking customer access...
+2025-02-20T12:28:15.487Z [INFO]: Customer access granted: 10
+2025-02-20T12:28:15.488Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:28:15.491Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:28:15.492Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:28:15.495Z [DEBUG]: Checking authentication...
+2025-02-20T12:28:15.498Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:28:15.504Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:28:15.504Z [DEBUG]: Checking customer access...
+2025-02-20T12:28:15.505Z [INFO]: Customer access granted: 10
+2025-02-20T12:28:15.505Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:28:15.509Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:28:15.510Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:28:15.696Z [DEBUG]: Checking authentication...
+2025-02-20T12:28:15.698Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:28:15.701Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:28:15.702Z [DEBUG]: Checking customer access...
+2025-02-20T12:28:15.702Z [INFO]: Customer access granted: 10
+2025-02-20T12:28:15.703Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:28:15.706Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:28:15.707Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:28:15.709Z [DEBUG]: Checking authentication...
+2025-02-20T12:28:15.711Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:28:15.715Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:28:15.716Z [DEBUG]: Checking customer access...
+2025-02-20T12:28:15.716Z [INFO]: Customer access granted: 10
+2025-02-20T12:28:15.717Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:28:15.722Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:28:15.723Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:28:50.299Z [DEBUG]: Checking authentication...
+2025-02-20T12:28:50.302Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:28:50.347Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:28:50.347Z [DEBUG]: Checking customer access...
+2025-02-20T12:28:50.348Z [INFO]: Customer access granted: 10
+2025-02-20T12:28:50.348Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:28:50.355Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:28:50.356Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:28:50.359Z [DEBUG]: Checking authentication...
+2025-02-20T12:28:50.360Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:28:50.363Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:28:50.364Z [DEBUG]: Checking customer access...
+2025-02-20T12:28:50.364Z [INFO]: Customer access granted: 10
+2025-02-20T12:28:50.364Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:28:50.368Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:28:50.369Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:28:50.495Z [DEBUG]: Checking authentication...
+2025-02-20T12:28:50.497Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:28:50.502Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:28:50.503Z [DEBUG]: Checking customer access...
+2025-02-20T12:28:50.503Z [INFO]: Customer access granted: 10
+2025-02-20T12:28:50.504Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:28:50.507Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:28:50.507Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:28:50.509Z [DEBUG]: Checking authentication...
+2025-02-20T12:28:50.511Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:28:50.514Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:28:50.514Z [DEBUG]: Checking customer access...
+2025-02-20T12:28:50.514Z [INFO]: Customer access granted: 10
+2025-02-20T12:28:50.515Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:28:50.519Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:28:50.520Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:28:50.733Z [DEBUG]: Checking authentication...
+2025-02-20T12:28:50.735Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:28:50.739Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:28:50.739Z [DEBUG]: Checking customer access...
+2025-02-20T12:28:50.740Z [INFO]: Customer access granted: 10
+2025-02-20T12:28:50.740Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:28:50.743Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:28:50.743Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:28:50.745Z [DEBUG]: Checking authentication...
+2025-02-20T12:28:50.747Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:28:50.751Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:28:50.752Z [DEBUG]: Checking customer access...
+2025-02-20T12:28:50.752Z [INFO]: Customer access granted: 10
+2025-02-20T12:28:50.752Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:28:50.757Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:28:50.757Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:28:52.186Z [DEBUG]: Checking authentication...
+2025-02-20T12:28:52.188Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:28:52.191Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:28:52.191Z [DEBUG]: Checking customer access...
+2025-02-20T12:28:52.192Z [INFO]: Customer access granted: 10
+2025-02-20T12:28:52.192Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:28:52.195Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:28:52.195Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:28:52.197Z [DEBUG]: Checking authentication...
+2025-02-20T12:28:52.199Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:28:52.203Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:28:52.204Z [DEBUG]: Checking customer access...
+2025-02-20T12:28:52.205Z [INFO]: Customer access granted: 10
+2025-02-20T12:28:52.205Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:28:52.209Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:28:52.210Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:31:54.461Z [INFO]: Server running on port 3000
+2025-02-20T12:31:57.655Z [DEBUG]: Checking authentication...
+2025-02-20T12:31:57.659Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:31:57.929Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:31:57.930Z [DEBUG]: Checking customer access...
+2025-02-20T12:31:57.931Z [INFO]: Customer access granted: 10
+2025-02-20T12:31:57.932Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:31:57.943Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:31:57.943Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:31:57.948Z [DEBUG]: Checking authentication...
+2025-02-20T12:31:57.951Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:31:57.954Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:31:57.954Z [DEBUG]: Checking customer access...
+2025-02-20T12:31:57.955Z [INFO]: Customer access granted: 10
+2025-02-20T12:31:57.955Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:31:57.959Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:31:57.959Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:31:58.221Z [DEBUG]: Checking authentication...
+2025-02-20T12:31:58.224Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:31:58.228Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:31:58.229Z [DEBUG]: Checking customer access...
+2025-02-20T12:31:58.229Z [INFO]: Customer access granted: 10
+2025-02-20T12:31:58.230Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:31:58.235Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:31:58.236Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:31:58.238Z [DEBUG]: Checking authentication...
+2025-02-20T12:31:58.240Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:31:58.246Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:31:58.246Z [DEBUG]: Checking customer access...
+2025-02-20T12:31:58.247Z [INFO]: Customer access granted: 10
+2025-02-20T12:31:58.247Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:31:58.251Z [DEBUG]: Fetched 1 orders for customer ID: 10
+2025-02-20T12:31:58.251Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:32:02.316Z [INFO]: Fetched 9 products
+2025-02-20T12:32:02.321Z [INFO]: Fetched 9 products
+2025-02-20T12:32:13.270Z [DEBUG]: Received order request: User ID = 10, Cart Items = [{"productId":10,"quantity":2}]
+2025-02-20T12:32:13.271Z [INFO]: New order request received for user ID: 10
+2025-02-20T12:32:13.354Z [INFO]: Order created successfully with ID: 45
+2025-02-20T12:32:13.368Z [INFO]: Added product ID 10 to order ID 45
+2025-02-20T12:32:13.373Z [INFO]: Order ID 45 placed successfully
+2025-02-20T12:32:14.720Z [DEBUG]: Checking authentication...
+2025-02-20T12:32:14.723Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:32:14.732Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:32:14.733Z [DEBUG]: Checking customer access...
+2025-02-20T12:32:14.733Z [INFO]: Customer access granted: 10
+2025-02-20T12:32:14.733Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:32:14.744Z [DEBUG]: Fetched 2 orders for customer ID: 10
+2025-02-20T12:32:14.745Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:32:14.749Z [DEBUG]: Checking authentication...
+2025-02-20T12:32:14.752Z [DEBUG]: Token decoded: {"id":10,"role":"Customer","iat":1740052624,"exp":1740139024}
+2025-02-20T12:32:14.759Z [INFO]: User authenticated: 10 - Customer
+2025-02-20T12:32:14.760Z [DEBUG]: Checking customer access...
+2025-02-20T12:32:14.761Z [INFO]: Customer access granted: 10
+2025-02-20T12:32:14.761Z [DEBUG]: Fetching orders for customer ID: 10
+2025-02-20T12:32:14.769Z [DEBUG]: Fetched 2 orders for customer ID: 10
+2025-02-20T12:32:14.769Z [INFO]: Successfully fetched orders for customer with ID: 10
+2025-02-20T12:32:18.259Z [INFO]: Fetched 9 products
+2025-02-20T12:32:18.266Z [INFO]: Fetched 9 products

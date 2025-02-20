@@ -39,6 +39,9 @@
 - [x] cancel a commit in a branch. revert a commit 
 
 
+- [ ] rest api - automate ,assert, UI testing java script what automation is used?
+
+
 
 
 
