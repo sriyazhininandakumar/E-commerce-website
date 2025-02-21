@@ -25,7 +25,11 @@ app.use('/api/manufacturers', manufacturerRoutes);
 app.use('/api/customer', customerRoutes);
 
 
-app.listen(PORT, () => {
-    logger.info(`Server running on port ${PORT}`);
+module.exports = app;
 
-});
+// Start the server only if not in test mode
+if (process.env.NODE_ENV !== "test") {
+    app.listen(PORT, () => {
+        logger.info(`Server running on port ${PORT}`);
+    });
+}

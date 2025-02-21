@@ -13,6 +13,14 @@ module.exports = {
       ssl: false,
     },
   },
+  test: {
+    username: "postgres",
+    password: "root",
+    database: "ecommerce_test", // Test DB
+    host: "localhost",
+    dialect: "postgres",
+    logging: false, // Disable logging for cleaner test output
+  },
   production: {
     username: process.env.PGUSER,
     password: process.env.PGPASSWORD,

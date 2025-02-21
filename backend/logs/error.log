@@ -1,1 +1,23 @@
 2025-02-18T13:30:46.335Z [ERROR]: This is an error message!
+2025-02-21T13:14:27.464Z [ERROR]: Error fetching products:
+2025-02-21T13:16:32.223Z [ERROR]: Error fetching products:
+2025-02-21T13:21:29.618Z [ERROR]: Error fetching products:
+2025-02-21T13:33:56.713Z [ERROR]: Error fetching products:
+2025-02-21T14:14:12.748Z [ERROR]: Error placing order: cartItems is not iterable
+2025-02-21T14:15:54.725Z [ERROR]: Error placing order: cartItems is not iterable
+2025-02-21T14:41:04.359Z [ERROR]: Error fetching products:
+2025-02-21T14:44:32.576Z [ERROR]: Error fetching products:
+2025-02-21T14:53:39.985Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T14:53:40.012Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T14:56:32.511Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T14:56:32.526Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T14:58:46.816Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T14:58:46.836Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T15:02:05.676Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T15:02:05.694Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T15:03:06.881Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T15:03:06.897Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T15:03:29.421Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T15:03:29.436Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T15:03:44.040Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T15:03:44.048Z [ERROR]: Authentication error: jwt malformed

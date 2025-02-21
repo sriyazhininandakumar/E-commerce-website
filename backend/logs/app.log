@@ -1,83 +1,5 @@
 2025-02-18T11:19:13.347Z [[32MINFO[39M]: Server running on port 3000
 2025-02-18T11:19:57.458Z [[32MINFO[39M]: Server running on port 3000
-2025-02-18T11:21:23.855Z [INFO]: Server running on port 3000
-2025-02-18T11:22:28.857Z [INFO]: Server running on port 3000
-2025-02-18T11:23:02.943Z [INFO]: Server running on port 3000
-2025-02-18T11:49:05.130Z [INFO]: Server running on port 3000
-2025-02-18T11:49:56.342Z [INFO]: Fetched 9 products
-2025-02-18T11:49:56.347Z [INFO]: Fetched 9 products
-2025-02-18T11:50:05.498Z [INFO]: New order request received for user ID: 10
-2025-02-18T11:50:05.689Z [INFO]: Order created successfully with ID: 40
-2025-02-18T11:50:05.699Z [INFO]: Added product ID 10 to order ID 40
-2025-02-18T11:50:05.704Z [INFO]: Added product ID 5 to order ID 40
-2025-02-18T11:50:05.707Z [INFO]: Order ID 40 placed successfully
-2025-02-18T11:50:08.628Z [INFO]: Successfully fetched orders for customer with ID: 10
-2025-02-18T11:50:08.641Z [INFO]: Successfully fetched orders for customer with ID: 10
-2025-02-18T11:50:37.988Z [INFO]: Fetched 9 products
-2025-02-18T11:50:37.993Z [INFO]: Fetched 9 products
-2025-02-18T11:51:17.269Z [INFO]: Order status updated for orderDetailId: 49 by manufacturerId: 3
-2025-02-18T11:51:35.625Z [INFO]: Successfully fetched orders for customer with ID: 10
-2025-02-18T11:51:35.635Z [INFO]: Successfully fetched orders for customer with ID: 10
-2025-02-18T11:51:43.713Z [INFO]: Fetched 9 products
-2025-02-18T11:51:43.716Z [INFO]: Fetched 9 products
-2025-02-18T11:51:47.692Z [INFO]: Successfully fetched orders for customer with ID: 10
-2025-02-18T11:51:47.703Z [INFO]: Successfully fetched orders for customer with ID: 10
-2025-02-18T11:52:39.145Z [INFO]: Fetched 9 products
-2025-02-18T11:52:39.149Z [INFO]: Fetched 9 products
-2025-02-18T13:30:46.328Z [INFO]: Server running on port 3000
-2025-02-18T13:30:46.332Z [INFO]: This is an info message.
-2025-02-18T13:30:46.333Z [WARN]: This is a warning message!
-2025-02-18T13:30:46.335Z [ERROR]: This is an error message!
-2025-02-18T13:41:16.875Z [INFO]: Server running on port 3000
-2025-02-18T13:41:17.016Z [INFO]:  Database connected successfully
-2025-02-18T13:42:20.845Z [INFO]: Server running on port 3000
-2025-02-18T13:42:20.984Z [INFO]:  Database connected successfully
-2025-02-18T13:42:43.273Z [INFO]: Server running on port 3000
-2025-02-18T13:42:43.410Z [INFO]:  Database connected successfully
-2025-02-18T13:45:32.997Z [INFO]: Server running on port 3000
-2025-02-18T13:45:33.199Z [INFO]:  Database connected successfully
-2025-02-18T13:46:41.151Z [INFO]: Server running on port 3000
-2025-02-18T14:09:30.918Z [INFO]: Server running on port 3000
-2025-02-18T14:09:41.769Z [INFO]: Received sign-in request for email: adhithi@gmail.com
-2025-02-18T14:09:42.062Z [WARN]: Incorrect password for email: adhithi@gmail.com
-2025-02-18T14:09:48.883Z [INFO]: Received sign-in request for email: adhithi@gmail.com
-2025-02-18T14:09:49.125Z [INFO]: User signed in successfully with email: adhithi@gmail.com
-2025-02-18T14:10:02.283Z [INFO]: Server running on port 3000
-2025-02-18T14:10:57.737Z [INFO]: Received sign-in request for email: suresh@gmail.com
-2025-02-18T14:10:57.961Z [INFO]: User signed in successfully with email: suresh@gmail.com
-2025-02-18T14:11:02.163Z [INFO]: Fetched 9 products
-2025-02-18T14:11:02.171Z [INFO]: Fetched 9 products
-2025-02-18T14:11:12.871Z [INFO]: Product updated: ID 10, Name: Summer Breeze
-2025-02-18T14:11:14.360Z [INFO]: Fetched 9 products
-2025-02-18T14:17:30.046Z [INFO]: Product updated: ID 10, Name: Summer Breeze
-2025-02-18T14:17:31.388Z [INFO]: Fetched 9 products
-2025-02-18T14:18:02.600Z [INFO]: Received sign-in request for email: adhithi@gmail.com
-2025-02-18T14:18:02.890Z [INFO]: User signed in successfully with email: adhithi@gmail.com
-2025-02-18T14:18:38.512Z [INFO]: Received sign-in request for email: adhithi@gmail.com
-2025-02-18T14:18:38.806Z [INFO]: User signed in successfully with email: adhithi@gmail.com
-2025-02-18T14:18:41.834Z [INFO]: Fetched 9 products
-2025-02-18T14:18:41.843Z [INFO]: Fetched 9 products
-2025-02-18T14:18:57.081Z [INFO]: New order request received for user ID: 5
-2025-02-18T14:18:57.128Z [INFO]: Order created successfully with ID: 41
-2025-02-18T14:18:57.135Z [INFO]: Added product ID 6 to order ID 41
-2025-02-18T14:18:57.137Z [INFO]: Order ID 41 placed successfully
-2025-02-18T14:19:50.947Z [INFO]: Received sign-in request for email: suresh@gmail.com
-2025-02-18T14:19:51.065Z [INFO]: User signed in successfully with email: suresh@gmail.com
-2025-02-18T14:19:54.577Z [INFO]: Fetched 9 products
-2025-02-18T14:19:54.582Z [INFO]: Fetched 9 products
-2025-02-18T14:20:07.342Z [INFO]: Received sign-in request for email: adhithi@gmail.com
-2025-02-18T14:20:07.459Z [INFO]: User signed in successfully with email: adhithi@gmail.com
-2025-02-18T14:20:10.036Z [INFO]: Fetched 9 products
-2025-02-18T14:20:10.041Z [INFO]: Fetched 9 products
-2025-02-18T14:20:18.692Z [INFO]: New order request received for user ID: 5
-2025-02-18T14:20:18.736Z [INFO]: Order created successfully with ID: 42
-2025-02-18T14:20:18.742Z [INFO]: Added product ID 3 to order ID 42
-2025-02-18T14:20:18.747Z [INFO]: Added product ID 4 to order ID 42
-2025-02-18T14:20:18.749Z [INFO]: Order ID 42 placed successfully
-2025-02-18T14:20:23.513Z [INFO]: Successfully fetched orders for customer with ID: 5
-2025-02-18T14:20:23.524Z [INFO]: Successfully fetched orders for customer with ID: 5
-2025-02-18T14:20:38.988Z [INFO]: Received sign-in request for email: ramasamy@gmail.com
-2025-02-18T14:20:39.104Z [INFO]: User signed in successfully with email: ramasamy@gmail.com
 2025-02-18T14:20:46.180Z [INFO]: Order status updated for orderDetailId: 51 by manufacturerId: 3
 2025-02-18T14:20:47.123Z [INFO]: Order status updated for orderDetailId: 51 by manufacturerId: 3
 2025-02-18T14:21:04.611Z [INFO]: Received sign-in request for email: adhithi@gmail.com
@@ -446,3 +368,200 @@
 2025-02-20T12:32:14.769Z [INFO]: Successfully fetched orders for customer with ID: 10
 2025-02-20T12:32:18.259Z [INFO]: Fetched 9 products
 2025-02-20T12:32:18.266Z [INFO]: Fetched 9 products
+2025-02-21T11:18:44.029Z [INFO]: Server running on port 3000
+2025-02-21T11:19:04.776Z [INFO]: Received sign-in request for email: sriyazhininandakumar30@gmail.com
+2025-02-21T11:19:05.204Z [INFO]: User signed in successfully with email: sriyazhininandakumar30@gmail.com
+2025-02-21T11:19:08.684Z [INFO]: Fetched 2 products
+2025-02-21T11:19:08.689Z [INFO]: Fetched 2 products
+2025-02-21T11:19:12.432Z [DEBUG]: Checking authentication...
+2025-02-21T11:19:12.435Z [DEBUG]: Token decoded: {"id":7,"role":"Customer","iat":1740136745,"exp":1740223145}
+2025-02-21T11:19:12.440Z [INFO]: User authenticated: 7 - Customer
+2025-02-21T11:19:12.441Z [DEBUG]: Checking customer access...
+2025-02-21T11:19:12.442Z [INFO]: Customer access granted: 7
+2025-02-21T11:19:12.443Z [DEBUG]: Fetching orders for customer ID: 7
+2025-02-21T11:19:12.454Z [INFO]: No orders found for customer with ID: 7
+2025-02-21T11:19:12.456Z [DEBUG]: Checking authentication...
+2025-02-21T11:19:12.459Z [DEBUG]: Token decoded: {"id":7,"role":"Customer","iat":1740136745,"exp":1740223145}
+2025-02-21T11:19:12.463Z [INFO]: User authenticated: 7 - Customer
+2025-02-21T11:19:12.464Z [DEBUG]: Checking customer access...
+2025-02-21T11:19:12.464Z [INFO]: Customer access granted: 7
+2025-02-21T11:19:12.465Z [DEBUG]: Fetching orders for customer ID: 7
+2025-02-21T11:19:12.469Z [INFO]: No orders found for customer with ID: 7
+2025-02-21T11:19:22.536Z [INFO]: Received sign-in request for email: sriyazhininandakumar30@gmail.com
+2025-02-21T11:19:22.624Z [INFO]: User signed in successfully with email: sriyazhininandakumar30@gmail.com
+2025-02-21T11:19:25.427Z [INFO]: Fetched 2 products
+2025-02-21T11:19:25.432Z [INFO]: Fetched 2 products
+2025-02-21T11:24:56.175Z [DEBUG]: Checking authentication...
+2025-02-21T11:24:56.177Z [DEBUG]: Token decoded: {"id":7,"role":"Customer","iat":1740136762,"exp":1740223162}
+2025-02-21T11:24:56.247Z [INFO]: User authenticated: 7 - Customer
+2025-02-21T11:24:56.247Z [DEBUG]: Checking customer access...
+2025-02-21T11:24:56.248Z [INFO]: Customer access granted: 7
+2025-02-21T11:24:56.248Z [DEBUG]: Fetching orders for customer ID: 7
+2025-02-21T11:24:56.256Z [INFO]: No orders found for customer with ID: 7
+2025-02-21T11:24:56.258Z [DEBUG]: Checking authentication...
+2025-02-21T11:24:56.260Z [DEBUG]: Token decoded: {"id":7,"role":"Customer","iat":1740136762,"exp":1740223162}
+2025-02-21T11:24:56.263Z [INFO]: User authenticated: 7 - Customer
+2025-02-21T11:24:56.264Z [DEBUG]: Checking customer access...
+2025-02-21T11:24:56.264Z [INFO]: Customer access granted: 7
+2025-02-21T11:24:56.265Z [DEBUG]: Fetching orders for customer ID: 7
+2025-02-21T11:24:56.268Z [INFO]: No orders found for customer with ID: 7
+2025-02-21T11:25:05.851Z [INFO]: Fetched 2 products
+2025-02-21T11:25:05.856Z [INFO]: Fetched 2 products
+2025-02-21T11:25:11.388Z [DEBUG]: Received order request: User ID = 7, Cart Items = [{"productId":3,"quantity":1},{"productId":4,"quantity":1}]
+2025-02-21T11:25:11.390Z [INFO]: New order request received for user ID: 7
+2025-02-21T11:25:11.445Z [INFO]: Order created successfully with ID: 1
+2025-02-21T11:25:11.453Z [INFO]: Added product ID 3 to order ID 1
+2025-02-21T11:25:11.457Z [INFO]: Added product ID 4 to order ID 1
+2025-02-21T11:25:11.460Z [INFO]: Order ID 1 placed successfully
+2025-02-21T11:25:13.819Z [DEBUG]: Checking authentication...
+2025-02-21T11:25:13.821Z [DEBUG]: Token decoded: {"id":7,"role":"Customer","iat":1740136762,"exp":1740223162}
+2025-02-21T11:25:13.827Z [INFO]: User authenticated: 7 - Customer
+2025-02-21T11:25:13.827Z [DEBUG]: Checking customer access...
+2025-02-21T11:25:13.828Z [INFO]: Customer access granted: 7
+2025-02-21T11:25:13.828Z [DEBUG]: Fetching orders for customer ID: 7
+2025-02-21T11:25:13.834Z [DEBUG]: Fetched 1 orders for customer ID: 7
+2025-02-21T11:25:13.836Z [INFO]: Successfully fetched orders for customer with ID: 7
+2025-02-21T11:25:13.839Z [DEBUG]: Checking authentication...
+2025-02-21T11:25:13.840Z [DEBUG]: Token decoded: {"id":7,"role":"Customer","iat":1740136762,"exp":1740223162}
+2025-02-21T11:25:13.844Z [INFO]: User authenticated: 7 - Customer
+2025-02-21T11:25:13.845Z [DEBUG]: Checking customer access...
+2025-02-21T11:25:13.845Z [INFO]: Customer access granted: 7
+2025-02-21T11:25:13.846Z [DEBUG]: Fetching orders for customer ID: 7
+2025-02-21T11:25:13.850Z [DEBUG]: Fetched 1 orders for customer ID: 7
+2025-02-21T11:25:13.850Z [INFO]: Successfully fetched orders for customer with ID: 7
+2025-02-21T11:25:25.735Z [INFO]: Fetched 2 products
+2025-02-21T11:25:25.740Z [INFO]: Fetched 2 products
+2025-02-21T13:14:27.464Z [ERROR]: Error fetching products:
+2025-02-21T13:16:32.223Z [ERROR]: Error fetching products:
+2025-02-21T13:21:29.618Z [ERROR]: Error fetching products:
+2025-02-21T13:25:09.082Z [INFO]: Fetched 0 products
+2025-02-21T13:26:31.212Z [INFO]: Fetched 0 products
+2025-02-21T13:27:10.459Z [INFO]: Fetched 0 products
+2025-02-21T13:33:56.713Z [ERROR]: Error fetching products:
+2025-02-21T13:35:14.989Z [INFO]: Fetched 0 products
+2025-02-21T13:36:39.870Z [INFO]: Received registration request for email: alice@gmail.com
+2025-02-21T13:36:39.956Z [INFO]: User registered successfully with email: alice@gmail.com
+2025-02-21T13:36:39.965Z [INFO]: Received registration request for email: smrithi@gmail.com
+2025-02-21T13:36:39.968Z [WARN]: Email already associated with an account: smrithi@gmail.com
+2025-02-21T13:36:39.976Z [INFO]: Received sign-in request for email: smrithi@gmail.com
+2025-02-21T13:36:40.071Z [INFO]: User signed in successfully with email: smrithi@gmail.com
+2025-02-21T13:36:40.076Z [INFO]: Received sign-in request for email: smrithi@gmail.com
+2025-02-21T13:36:40.151Z [WARN]: Incorrect password for email: smrithi@gmail.com
+2025-02-21T13:40:38.854Z [INFO]: Received registration request for email: alice@gmail.com
+2025-02-21T13:40:38.943Z [INFO]: User registered successfully with email: alice@gmail.com
+2025-02-21T13:40:38.954Z [INFO]: Received registration request for email: smrithi@gmail.com
+2025-02-21T13:40:38.956Z [WARN]: Email already associated with an account: smrithi@gmail.com
+2025-02-21T13:40:38.962Z [INFO]: Received sign-in request for email: smrithi@gmail.com
+2025-02-21T13:40:39.066Z [INFO]: User signed in successfully with email: smrithi@gmail.com
+2025-02-21T13:40:39.074Z [INFO]: Received sign-in request for email: smrithi@gmail.com
+2025-02-21T13:40:39.152Z [WARN]: Incorrect password for email: smrithi@gmail.com
+2025-02-21T13:47:23.504Z [DEBUG]: Checking admin access...
+2025-02-21T13:47:23.509Z [DEBUG]: Token decoded: {"id":1,"role":"Admin","iat":1740145643,"exp":1740232043}
+2025-02-21T13:47:23.518Z [INFO]: Admin access granted: 1
+2025-02-21T13:47:23.523Z [INFO]: Product created successfully: ID 1, Name: Test Product
+2025-02-21T13:47:23.538Z [DEBUG]: Checking admin access...
+2025-02-21T13:47:23.540Z [DEBUG]: Token decoded: {"id":2,"role":"Customer","iat":1740145643,"exp":1740232043}
+2025-02-21T13:47:23.544Z [WARN]: Access denied: User 2 is not an Admin
+2025-02-21T13:47:23.550Z [DEBUG]: Checking admin access...
+2025-02-21T13:47:23.552Z [DEBUG]: Token decoded: {"id":1,"role":"Admin","iat":1740145643,"exp":1740232043}
+2025-02-21T13:47:23.555Z [INFO]: Admin access granted: 1
+2025-02-21T13:47:23.556Z [WARN]: Invalid product input: Missing name or invalid price
+2025-02-21T13:47:23.563Z [INFO]: Fetched 1 products
+2025-02-21T13:47:23.569Z [DEBUG]: Checking admin access...
+2025-02-21T13:47:23.571Z [DEBUG]: Token decoded: {"id":1,"role":"Admin","iat":1740145643,"exp":1740232043}
+2025-02-21T13:47:23.574Z [INFO]: Admin access granted: 1
+2025-02-21T13:47:23.580Z [INFO]: Product updated: ID 1, Name: Updated Product
+2025-02-21T13:47:23.586Z [DEBUG]: Checking admin access...
+2025-02-21T13:47:23.589Z [DEBUG]: Token decoded: {"id":2,"role":"Customer","iat":1740145643,"exp":1740232043}
+2025-02-21T13:47:23.592Z [WARN]: Access denied: User 2 is not an Admin
+2025-02-21T13:47:23.598Z [DEBUG]: Checking admin access...
+2025-02-21T13:47:23.600Z [DEBUG]: Token decoded: {"id":1,"role":"Admin","iat":1740145643,"exp":1740232043}
+2025-02-21T13:47:23.603Z [INFO]: Admin access granted: 1
+2025-02-21T13:47:23.605Z [WARN]: Product not found: ID 99999
+2025-02-21T13:47:23.610Z [DEBUG]: Checking admin access...
+2025-02-21T13:47:23.613Z [DEBUG]: Token decoded: {"id":1,"role":"Admin","iat":1740145643,"exp":1740232043}
+2025-02-21T13:47:23.616Z [INFO]: Admin access granted: 1
+2025-02-21T13:47:23.621Z [INFO]: Product deleted: ID 1, Name: Updated Product
+2025-02-21T13:47:23.626Z [DEBUG]: Checking admin access...
+2025-02-21T13:47:23.628Z [DEBUG]: Token decoded: {"id":2,"role":"Customer","iat":1740145643,"exp":1740232043}
+2025-02-21T13:47:23.631Z [WARN]: Access denied: User 2 is not an Admin
+2025-02-21T13:47:23.637Z [DEBUG]: Checking admin access...
+2025-02-21T13:47:23.638Z [DEBUG]: Token decoded: {"id":1,"role":"Admin","iat":1740145643,"exp":1740232043}
+2025-02-21T13:47:23.641Z [INFO]: Admin access granted: 1
+2025-02-21T13:47:23.643Z [WARN]: Product not found: ID 99999
+2025-02-21T14:13:11.692Z [DEBUG]: Received order request: User ID = 1, Cart Items = [{"productId":1,"quantity":2}]
+2025-02-21T14:13:11.695Z [INFO]: New order request received for user ID: 1
+2025-02-21T14:13:11.742Z [INFO]: Order created successfully with ID: 1
+2025-02-21T14:13:11.748Z [INFO]: Added product ID 1 to order ID 1
+2025-02-21T14:13:11.751Z [INFO]: Order ID 1 placed successfully
+2025-02-21T14:14:12.672Z [DEBUG]: Received order request: User ID = 1, Cart Items = [{"productId":1,"quantity":2}]
+2025-02-21T14:14:12.675Z [INFO]: New order request received for user ID: 1
+2025-02-21T14:14:12.717Z [INFO]: Order created successfully with ID: 1
+2025-02-21T14:14:12.724Z [INFO]: Added product ID 1 to order ID 1
+2025-02-21T14:14:12.726Z [INFO]: Order ID 1 placed successfully
+2025-02-21T14:14:12.737Z [DEBUG]: Received order request: User ID = 1, Cart Items = undefined
+2025-02-21T14:14:12.739Z [INFO]: New order request received for user ID: 1
+2025-02-21T14:14:12.742Z [INFO]: Order created successfully with ID: 2
+2025-02-21T14:14:12.748Z [ERROR]: Error placing order: cartItems is not iterable
+2025-02-21T14:15:54.650Z [DEBUG]: Received order request: User ID = 1, Cart Items = [{"productId":1,"quantity":2}]
+2025-02-21T14:15:54.653Z [INFO]: New order request received for user ID: 1
+2025-02-21T14:15:54.694Z [INFO]: Order created successfully with ID: 1
+2025-02-21T14:15:54.700Z [INFO]: Added product ID 1 to order ID 1
+2025-02-21T14:15:54.703Z [INFO]: Order ID 1 placed successfully
+2025-02-21T14:15:54.715Z [DEBUG]: Received order request: User ID = 1, Cart Items = undefined
+2025-02-21T14:15:54.716Z [INFO]: New order request received for user ID: 1
+2025-02-21T14:15:54.719Z [INFO]: Order created successfully with ID: 2
+2025-02-21T14:15:54.725Z [ERROR]: Error placing order: cartItems is not iterable
+2025-02-21T14:25:01.501Z [DEBUG]: Checking authentication...
+2025-02-21T14:25:01.506Z [DEBUG]: Token decoded: {"id":1,"roleId":2,"iat":1740147901,"exp":1740151501}
+2025-02-21T14:25:01.515Z [INFO]: User authenticated: 1 - Customer
+2025-02-21T14:25:01.516Z [DEBUG]: Checking customer access...
+2025-02-21T14:25:01.517Z [INFO]: Customer access granted: 1
+2025-02-21T14:25:01.518Z [DEBUG]: Fetching orders for customer ID: 1
+2025-02-21T14:25:01.525Z [DEBUG]: Fetched 1 orders for customer ID: 1
+2025-02-21T14:25:01.526Z [INFO]: Successfully fetched orders for customer with ID: 1
+2025-02-21T14:25:01.537Z [DEBUG]: Checking authentication...
+2025-02-21T14:25:01.546Z [DEBUG]: Checking authentication...
+2025-02-21T14:25:01.548Z [DEBUG]: Token decoded: {"id":2,"roleId":2,"iat":1740147901,"exp":1740151501}
+2025-02-21T14:25:01.551Z [INFO]: User authenticated: 2 - Customer
+2025-02-21T14:25:01.552Z [DEBUG]: Checking customer access...
+2025-02-21T14:25:01.553Z [INFO]: Customer access granted: 2
+2025-02-21T14:25:01.553Z [DEBUG]: Fetching orders for customer ID: 2
+2025-02-21T14:25:01.556Z [INFO]: No orders found for customer with ID: 2
+2025-02-21T14:40:59.457Z [INFO]: Server running on port 3000
+2025-02-21T14:41:04.359Z [ERROR]: Error fetching products:
+2025-02-21T14:41:48.014Z [INFO]: Received registration request for email: suresh@gmail.com
+2025-02-21T14:41:48.062Z [WARN]: Invalid roleId selected: 1
+2025-02-21T14:41:58.311Z [INFO]: Received registration request for email: suresh@gmail.com
+2025-02-21T14:41:58.350Z [WARN]: Invalid roleId selected: 1
+2025-02-21T14:42:46.754Z [INFO]: Received registration request for email: suresh@gmail.com
+2025-02-21T14:42:46.799Z [WARN]: Invalid roleId selected: 1
+2025-02-21T14:44:32.576Z [ERROR]: Error fetching products:
+2025-02-21T14:53:39.982Z [DEBUG]: Checking authentication...
+2025-02-21T14:53:39.985Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T14:53:40.010Z [DEBUG]: Checking authentication...
+2025-02-21T14:53:40.012Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T14:56:32.509Z [DEBUG]: Checking authentication...
+2025-02-21T14:56:32.511Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T14:56:32.525Z [DEBUG]: Checking authentication...
+2025-02-21T14:56:32.526Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T14:58:46.813Z [DEBUG]: Checking authentication...
+2025-02-21T14:58:46.816Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T14:58:46.833Z [DEBUG]: Checking authentication...
+2025-02-21T14:58:46.836Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T15:02:05.673Z [DEBUG]: Checking authentication...
+2025-02-21T15:02:05.676Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T15:02:05.693Z [DEBUG]: Checking authentication...
+2025-02-21T15:02:05.694Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T15:03:06.877Z [DEBUG]: Checking authentication...
+2025-02-21T15:03:06.881Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T15:03:06.896Z [DEBUG]: Checking authentication...
+2025-02-21T15:03:06.897Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T15:03:29.418Z [DEBUG]: Checking authentication...
+2025-02-21T15:03:29.421Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T15:03:29.435Z [DEBUG]: Checking authentication...
+2025-02-21T15:03:29.436Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T15:03:44.034Z [DEBUG]: Checking authentication...
+2025-02-21T15:03:44.040Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T15:03:44.047Z [DEBUG]: Checking authentication...
+2025-02-21T15:03:44.048Z [ERROR]: Authentication error: jwt malformed
