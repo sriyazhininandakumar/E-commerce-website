@@ -21,3 +21,13 @@
 2025-02-21T15:03:29.436Z [ERROR]: Authentication error: jwt malformed
 2025-02-21T15:03:44.040Z [ERROR]: Authentication error: jwt malformed
 2025-02-21T15:03:44.048Z [ERROR]: Authentication error: jwt malformed
+2025-02-21T17:42:58.268Z [ERROR]: Error fetching products:
+2025-02-21T17:43:04.197Z [ERROR]: Error fetching products:
+2025-02-21T17:43:10.455Z [ERROR]: Error fetching products:
+2025-02-21T17:52:36.603Z [ERROR]: Error fetching products:
+2025-02-22T08:30:11.996Z [ERROR]: Authentication error: jwt expired
+2025-02-22T08:30:12.005Z [ERROR]: Authentication error: jwt expired
+2025-02-22T08:50:12.052Z [ERROR]: Authentication error: jwt expired
+2025-02-22T08:50:12.057Z [ERROR]: Authentication error: jwt expired
+2025-02-22T08:50:15.771Z [ERROR]: Authentication error: jwt expired
+2025-02-22T08:50:15.775Z [ERROR]: Authentication error: jwt expired

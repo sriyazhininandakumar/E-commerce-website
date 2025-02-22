@@ -9,19 +9,19 @@ const CustomerDashboard = () => {
 
   return (
     <div className="min-h-screen bg-white font-sans">
-      {/* Navbar */}
+      
       <NavCust cart={cart} />
 
-      {/* Hero Section - Image Right Below Navbar */}
+      
       {location.pathname === "/customer" && (
         <div
           className="relative w-full h-[500px] bg-cover bg-center flex items-center justify-center"
           style={{ backgroundImage: `url(${pic3})` }}
         >
-          {/* Dark Overlay */}
+        
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-          {/* Text Content */}
+         
           <div className="relative text-center text-white px-6">
             <h1 className="text-5xl uppercase tracking-wide font-extrabold">
               Summer Collection 2025
@@ -51,7 +51,7 @@ const CustomerDashboard = () => {
         </div>
       )}
 
-      {/* Main Content */}
+    
       <div className="container mx-auto p-6">
         <Outlet context={{ cart, setCart }} />
       </div>

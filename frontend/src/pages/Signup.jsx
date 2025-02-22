@@ -39,7 +39,7 @@ const Signup = () => {
 
       if (response.ok) {
         setMessage("Signup Successful! Redirecting...");
-        setTimeout(() => navigate("/signin"), 2000);
+        setTimeout(() => navigate("/"), 2000);
       } else {
         setMessage(data.message || "Something went wrong!");
       }

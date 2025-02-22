@@ -5,12 +5,13 @@ import axios from "axios";
 const CustomerProduct = () => {
   const [products, setProducts] = useState([]);
   const { cart, setCart } = useOutletContext();
+  const [addedToCart, setAddedToCart] = useState({}); // ✅ Track button state
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get("http://localhost:3000/api/products");
-        console.log("fetched Products : ", response.data);
+        console.log("Fetched Products:", response.data);
         setProducts(response.data);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -20,13 +21,14 @@ const CustomerProduct = () => {
     fetchProducts();
   }, []);
 
-  const addToCart = (product, event) => {
+  const addToCart = (product) => {
     setCart((prevCart) => [...prevCart, product]);
 
-    
-    event.target.innerText = "Added to Cart";
-    event.target.classList.remove("bg-black", "hover:bg-gray-800");
-    event.target.classList.add("bg-green-500");
+    // ✅ Update button state instead of modifying the DOM directly
+    setAddedToCart((prevState) => ({
+      ...prevState,
+      [product.id]: true,
+    }));
   };
 
   return (
@@ -47,10 +49,14 @@ const CustomerProduct = () => {
             <h3 className="text-xl font-semibold">{product.name}</h3>
             <p className="text-gray-600">Price: ₹{product.price}</p>
             <button
-              onClick={(event) => addToCart(product, event)}
-              className="mt-3 px-4 py-2 rounded-md bg-black text-white hover:bg-gray-800 transition"
+              onClick={() => addToCart(product)}
+              className={`mt-3 px-4 py-2 rounded-md transition ${
+                addedToCart[product.id]
+                  ? "bg-green-500 text-white"
+                  : "bg-black text-white hover:bg-gray-800"
+              }`}
             >
-              Add to Cart
+              {addedToCart[product.id] ? "Added to Cart" : "Add to Cart"}
             </button>
           </div>
         ))}

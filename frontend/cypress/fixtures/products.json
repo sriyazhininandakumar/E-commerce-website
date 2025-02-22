@@ -1,0 +1,16 @@
+
+[
+    {
+      "id": 1,
+      "productname": "Dress 1",
+      "price": "5000",
+      "description":"shimmery party dress"
+    },
+    {
+      "id": 2,
+      "name": "Dress 2",
+      "price": "6000",
+      "description":"rustic bodycon dress"
+    }
+  ]
+  

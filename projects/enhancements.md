@@ -40,8 +40,8 @@
 
 
 - [ ] rest api - automate ,assert, UI testing java script what automation is used?
-
-
+- [ ] Sign Out
+- [ ] daily log - github.io
 
 
 
